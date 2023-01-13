@@ -6,6 +6,7 @@ export interface TimelineData {
   description: string;
   date: string;
   color: string;
+  steps?: Timeline;
 }
 
 export type Timeline = TimelineData[];

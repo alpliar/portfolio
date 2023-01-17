@@ -1,6 +1,7 @@
 import {
   Accordion,
   AccordionButton,
+  AccordionIcon,
   AccordionItem,
   AccordionPanel,
   Box,
@@ -30,7 +31,7 @@ const TimelineStepDescription: React.FC<Props> = ({
   const { title, date, description, steps, color, logo } = step;
 
   const StepTitle: React.FC<WithStep> = ({ step, isNested = false }) => (
-    <Heading as="h2" fontSize="xl">
+    <Heading as="h2" fontSize="xl" textAlign="start">
       {step.title}
     </Heading>
   );
@@ -85,6 +86,7 @@ const TimelineStepDescription: React.FC<Props> = ({
               mt={isNested ? iconSize : 0}
             >
               <StepTitle step={step} isNested />
+              <AccordionIcon />
             </AccordionButton>
             <AccordionPanel p={0}>
               <StepDescription step={step} isNested />

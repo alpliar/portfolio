@@ -33,7 +33,13 @@ const TimelineStepDescription: React.FC<Props> = ({
   iconSize = 0,
 }) => {
   const StepTitle: React.FC<WithStep> = ({ step }) => (
-    <Heading as="h2" fontSize={isNested ? "sm" : "xl"} textAlign="start">
+    <Heading
+      as="h2"
+      fontSize={isNested ? "sm" : "xl"}
+      minHeight={iconSize}
+      display="flex"
+      alignItems="center"
+    >
       {step.position}
     </Heading>
   );
@@ -82,7 +88,7 @@ const TimelineStepDescription: React.FC<Props> = ({
           <AccordionItem>
             <AccordionButton
               p={0}
-              minHeight={iconSize}
+              height={iconSize}
               display="flex"
               alignItems="center"
               mt={isNested ? iconSize : 0}

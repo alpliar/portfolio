@@ -142,7 +142,7 @@ const timelineData: Timeline = [
     date: "2007",
     position: "Bachelor of Technology",
     company: "Université Paris Cité",
-    description: "...",
+    description: "",
   },
 ];
 

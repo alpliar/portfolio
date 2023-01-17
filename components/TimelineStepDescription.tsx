@@ -33,7 +33,7 @@ const TimelineStepDescription: React.FC<Props> = ({
   iconSize = 0,
 }) => {
   const StepTitle: React.FC<WithStep> = ({ step }) => (
-    <Heading as="h2" fontSize="xl" textAlign="start">
+    <Heading as="h2" fontSize={isNested ? "sm" : "xl"} textAlign="start">
       {step.position}
     </Heading>
   );
@@ -43,10 +43,14 @@ const TimelineStepDescription: React.FC<Props> = ({
       <Stack>
         <Wrap>
           <WrapItem>
-            {step.date && <Text fontSize="sm">{step.date}</Text>}
+            {step.date && (
+              <Text fontSize={isNested ? "xs" : "sm"}>{step.date}</Text>
+            )}
           </WrapItem>
           <WrapItem>
-            {step.company && <Text fontSize="sm">@ {step.company}</Text>}
+            {step.company && (
+              <Text fontSize={isNested ? "xs" : "sm"}>@ {step.company}</Text>
+            )}
           </WrapItem>
         </Wrap>
         {step.description && <Text>{step.description}</Text>}

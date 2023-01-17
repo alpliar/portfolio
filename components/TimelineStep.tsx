@@ -22,7 +22,7 @@ type Props = {
 };
 
 const TimelineStep: React.FC<Props> = ({ step, isNested = false }) => {
-  const { color, logo, title, date, description, steps } = step;
+  const { color, logo, position, company, date, description, steps } = step;
   const iconSize = 8;
   const spacing = 2;
   const borderColor = useColorModeValue("blackAlpha.300", "whiteAlpha.300");
@@ -84,7 +84,7 @@ const TimelineStep: React.FC<Props> = ({ step, isNested = false }) => {
       </Stack>
       <Stack maxW={maxWidth} w="full" mb={!isNested ? spacing * 3 : 0}>
         <TimelineStepDescription
-          step={{ color, logo, title, date, description, steps }}
+          step={step}
           iconSize={iconSize}
           isNested={isNested}
         />

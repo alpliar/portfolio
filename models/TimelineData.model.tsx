@@ -2,7 +2,8 @@ import { IconType } from "react-icons";
 
 export interface TimelineData {
   logo: IconType;
-  title: string;
+  position: string;
+  company: string;
   description: string;
   date: string;
   color: string;

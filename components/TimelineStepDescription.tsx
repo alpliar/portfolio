@@ -6,7 +6,11 @@ import {
   AccordionPanel,
   Box,
   Heading,
+  HStack,
+  Stack,
   Text,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import React from "react";
 import { TimelineData } from "../models/TimelineData.model";
@@ -28,19 +32,25 @@ const TimelineStepDescription: React.FC<Props> = ({
   isNested = false,
   iconSize = 0,
 }) => {
-  const StepTitle: React.FC<WithStep> = ({ step, isNested = false }) => (
+  const StepTitle: React.FC<WithStep> = ({ step }) => (
     <Heading as="h2" fontSize="xl" textAlign="start">
-      {step.title}
+      {step.position}
     </Heading>
   );
 
-  const StepDescription: React.FC<WithStep> = ({ step, isNested = false }) => (
+  const StepDescription: React.FC<WithStep> = ({ step }) => (
     <>
-      {/* <Text fontStyle="italic">{date}</Text> */}
-      <Text fontSize="sm">
-        {step.date}, {step.description}
-      </Text>
-      <Text>{step.description}</Text>
+      <Stack>
+        <Wrap>
+          <WrapItem>
+            {step.date && <Text fontSize="sm">{step.date}</Text>}
+          </WrapItem>
+          <WrapItem>
+            {step.company && <Text fontSize="sm">@ {step.company}</Text>}
+          </WrapItem>
+        </Wrap>
+        {step.description && <Text>{step.description}</Text>}
+      </Stack>
 
       <Box>
         {step.steps?.map((subStep, index) => (
@@ -54,6 +64,7 @@ const TimelineStepDescription: React.FC<Props> = ({
     <>
       {isNested ? (
         <Accordion
+          defaultIndex={[0]}
           allowMultiple
           borderBottom="transparent"
           borderTop="transparent"

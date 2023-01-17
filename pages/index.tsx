@@ -13,7 +13,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        {/* <Box bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text"> */}>
         <Box>
           <Heading as="h1">Alexandre</Heading>
           <Text>Senior software engineer</Text>

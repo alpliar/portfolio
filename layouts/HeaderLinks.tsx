@@ -10,8 +10,8 @@ type HeaderLinkProps = {
 };
 
 const HeaderLink: React.FC<HeaderLinkProps> = ({ href, children }) => (
-  <WrapItem as={Link} href={href}>
-    {children}
+  <WrapItem>
+    <Link href={href}>{children}</Link>
   </WrapItem>
 );
 

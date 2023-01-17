@@ -28,8 +28,6 @@ const TimelineStepDescription: React.FC<Props> = ({
   isNested = false,
   iconSize = 0,
 }) => {
-  const { title, date, description, steps, color, logo } = step;
-
   const StepTitle: React.FC<WithStep> = ({ step, isNested = false }) => (
     <Heading as="h2" fontSize="xl" textAlign="start">
       {step.title}
@@ -49,17 +47,6 @@ const TimelineStepDescription: React.FC<Props> = ({
           <TimelineStep key={index} step={subStep} isNested />
         ))}
       </Box>
-
-      {/* <Accordion allowMultiple>
-        {step.steps?.map((subStep, index) => (
-          <AccordionItem key={index}>
-            <AccordionButton>
-              <StepTitle step={subStep} />
-            </AccordionButton>
-            <AccordionPanel></AccordionPanel>
-          </AccordionItem>
-        ))}
-      </Accordion> */}
     </>
   );
 

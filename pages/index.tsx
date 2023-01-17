@@ -1,7 +1,7 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import Timeline from "../components/Timeline";
-import HomepageLayout from "../layouts/HomepageLayout";
+import PageLayout from "../layouts/PageLayout";
 
 export default function Home() {
   return (
@@ -12,15 +12,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <HomepageLayout>
-          <Box bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text">
-            <Heading as="h1">Alexandre</Heading>
-            <Text>Senior software engineer</Text>
-          </Box>
-          <Timeline />
-        </HomepageLayout>
-      </main>
+      <PageLayout>
+        {/* <Box bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text"> */}>
+        <Box>
+          <Heading as="h1">Alexandre</Heading>
+          <Text>Senior software engineer</Text>
+        </Box>
+      </PageLayout>
     </>
   );
 }

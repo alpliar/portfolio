@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <main>
         <HomepageLayout>
-          <Box>
+          <Box bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text">
             <Heading as="h1">Alexandre</Heading>
             <Text>Senior software engineer</Text>
           </Box>

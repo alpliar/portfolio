@@ -1,5 +1,9 @@
 import Icon from "@chakra-ui/icon";
 import {
+  Accordion,
+  AccordionButton,
+  AccordionItem,
+  AccordionPanel,
   Box,
   Flex,
   Heading,
@@ -10,16 +14,15 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { TimelineData } from "../models/TimelineData.model";
+import TimelineStepDescription from "./TimelineStepDescription";
 
 type Props = {
   step: TimelineData;
   isNested?: boolean;
 };
 
-const TimelineStep: React.FC<Props> = ({
-  step: { color, logo, title, date, description, steps },
-  isNested = false,
-}) => {
+const TimelineStep: React.FC<Props> = ({ step, isNested = false }) => {
+  const { color, logo, title, date, description, steps } = step;
   const iconSize = 8;
   const spacing = 2;
   const borderColor = useColorModeValue("blackAlpha.300", "whiteAlpha.300");
@@ -47,6 +50,7 @@ const TimelineStep: React.FC<Props> = ({
 
         <SimpleGrid flex={1} columns={2}>
           <Box />
+          {/* Vertical dotted line (the timeline breadcrumb) */}
           <Flex
             borderLeft={borderSize}
             borderStyle={borderStyle}
@@ -57,12 +61,12 @@ const TimelineStep: React.FC<Props> = ({
           >
             {isNested && (
               <Icon
-                boxSize={iconSize / 2}
+                boxSize={iconSize}
                 as={logo}
                 color={color}
                 position="absolute"
-                left={-spacing}
-                mb={-iconSize / 2}
+                left={`-122%`}
+                mb={-iconSize}
               />
             )}
           </Flex>
@@ -78,27 +82,12 @@ const TimelineStep: React.FC<Props> = ({
           />
         )} */}
       </Stack>
-      <Stack maxW={maxWidth} mb={!isNested ? spacing * 3 : 0}>
-        <Heading
-          as="h2"
-          fontSize="xl"
-          minHeight={iconSize}
-          display="flex"
-          alignItems="center"
-          mt={isNested ? iconSize : 0}
-        >
-          {title}
-        </Heading>
-        {/* <Text fontStyle="italic">{date}</Text> */}
-        <Text fontSize="sm">
-          {date}, {description}
-        </Text>
-        <Text>{description}</Text>
-        <Box>
-          {steps?.map((subStep, index) => (
-            <TimelineStep key={index} step={subStep} isNested />
-          ))}
-        </Box>
+      <Stack maxW={maxWidth} w="full" mb={!isNested ? spacing * 3 : 0}>
+        <TimelineStepDescription
+          step={{ color, logo, title, date, description, steps }}
+          iconSize={iconSize}
+          isNested={isNested}
+        />
       </Stack>
     </Flex>
   );

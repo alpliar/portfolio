@@ -10,9 +10,9 @@ const PageLayout: React.FC<Props> = ({ children }) => {
   return (
     <Box as="main">
       <Header start={<PageHeaderLogo />} end={<PageHeaderEnd />} />
-      <Center minH="lg" p={{ base: 4, md: 16 }} w={{ base: "full" }}>
-        <Stack spacing={8}>{children}</Stack>
-      </Center>
+      <Stack p={{ base: 4, md: 16 }} spacing={8}>
+        {children}
+      </Stack>
     </Box>
   );
 };

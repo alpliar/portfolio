@@ -1,15 +1,9 @@
 import Icon from "@chakra-ui/icon";
 import {
-  Accordion,
-  AccordionButton,
-  AccordionItem,
-  AccordionPanel,
   Box,
   Flex,
-  Heading,
   SimpleGrid,
   Stack,
-  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
@@ -34,6 +28,7 @@ const TimelineStep: React.FC<Props> = ({ step, isNested = false }) => {
     <Flex
       marginInlineStart={isNested ? `-${spacing * 2} !important` : 0}
       marginTop={isNested ? -spacing * 2 : 0}
+      margin="auto"
     >
       <Stack spacing={spacing} mr={spacing}>
         {isNested && (

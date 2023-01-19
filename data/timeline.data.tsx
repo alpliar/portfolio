@@ -1,12 +1,12 @@
-import { HiBookmark } from "react-icons/hi";
-import { MdDownloading, MdSchool } from "react-icons/md";
+import { BsFileCodeFill, BsFillCloudUploadFill } from "react-icons/bs";
+import { MdSchool } from "react-icons/md";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import { Timeline } from "../models/TimelineData.model";
 
-const jobIcon = HiBookmark;
+const jobIcon = BsFileCodeFill;
 const missionIcon = VscDebugBreakpointLog;
 const schoolIcon = MdSchool;
-const searchingIcon = MdDownloading;
+const searchingIcon = BsFillCloudUploadFill;
 
 const recentEventColor = "orange.800";
 const extiaColors = "orange.700";
@@ -19,7 +19,7 @@ const timelineData: Timeline = [
   {
     logo: searchingIcon,
     color: recentEventColor,
-    date: "Those days",
+    date: "Today",
     position: "Looking for opportunities",
     company: "Pole emploi",
     description: "Lyon, France",

@@ -1,6 +1,5 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import Head from "next/head";
-import Timeline from "../components/Timeline";
 import PageLayout from "../layouts/PageLayout";
 
 export default function Home() {

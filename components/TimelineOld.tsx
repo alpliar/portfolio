@@ -7,12 +7,14 @@ type Props = {};
 
 const Timeline: React.FC<Props> = ({}) => {
   return (
-    <List spacing={2}>
-      {timelineData.map((data, key) => (
-        <ListItem key={key} mt={0}>
-          <TimelineStep step={data} />
-        </ListItem>
-      ))}
+    <List spacing={2} margin="auto">
+      {timelineData.map((data, key) => {
+        return (
+          <ListItem key={key} mt={0}>
+            <TimelineStep step={data} />
+          </ListItem>
+        );
+      })}
     </List>
   );
 };

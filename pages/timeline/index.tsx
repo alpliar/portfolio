@@ -1,13 +1,12 @@
-import React from "react";
-import Timeline from "../../components/Timeline";
+import TimeLine from "../../components/TimeLine";
 import PageLayout from "../../layouts/PageLayout";
 
 type Props = {};
 
-const TimelinePage = () => {
+const TimelinePage: React.FC<Props> = () => {
   return (
     <PageLayout>
-      <Timeline />
+      <TimeLine />
     </PageLayout>
   );
 };

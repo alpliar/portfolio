@@ -17,9 +17,9 @@ const TimeLineEvent: React.FC<Props> = ({ event }) => {
   const { position, company, date, color } = event;
   const cardStyle: CardProps = {
     width: { base: "full", sm: 80, lg: 96 },
-    borderWidth: 2,
-    borderColor: color,
-    borderRadius: "2xl",
+    // borderWidth: 2,
+    // borderColor: color,
+    // borderRadius: "2xl",
   };
   return (
     <Card {...cardStyle}>

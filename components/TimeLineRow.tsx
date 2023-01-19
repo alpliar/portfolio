@@ -1,4 +1,9 @@
-import { Flex, FlexProps, ListItem } from "@chakra-ui/react";
+import {
+  Flex,
+  FlexProps,
+  ListItem,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import { TimelineData } from "../models/TimelineData.model";
 import TimeLineRowDecoration from "./TimeLineRowDecoration";
@@ -9,6 +14,7 @@ interface Props {
   isEven: boolean;
   isFirst: boolean;
   isLast: boolean;
+  isNested?: boolean;
 }
 
 const TimeLineRow: React.FC<Props> = ({
@@ -17,6 +23,7 @@ const TimeLineRow: React.FC<Props> = ({
   isEven,
   isFirst,
   isLast,
+  isNested = false,
 }) => {
   const style: FlexProps = {
     alignItems: "center",
@@ -33,21 +40,38 @@ const TimeLineRow: React.FC<Props> = ({
     // flex: { lg: 1 },
     flex: 1,
     // w: { base: "full", lg: 64 },
-    direction: "column",
-    align: { lg: isEven ? "end" : "start" },
+    // align: { lg: isEven ? "end" : "start" },
+    justify: { lg: isEven ? "end" : "start" },
   };
+  // const showChildrenDecoration: boolean = useBreakpointValue({
+  //   base: false,
+  //   lg: true,
+  // });
 
   return (
     <Flex as={ListItem} p={0} {...style} {...oddEvenStyle}>
       <Flex {...emptyBoxStyle} />
+
       <TimeLineRowDecoration
+        isEven={isEven}
         isFirst={isFirst}
         isLast={isLast}
         color={event.color}
         logo={event.logo}
+        // hideLogo={showChildrenDecoration}
       />
 
-      <Flex {...childrenContainer}>{children}</Flex>
+      <Flex {...childrenContainer}>
+        {/* {isNested && showChildrenDecoration && (
+          <TimeLineRowDecoration
+            isFirst={false}
+            isLast={false}
+            color={event.color}
+            logo={event.logo}
+          />
+        )} */}
+        {children}
+      </Flex>
     </Flex>
   );
 };

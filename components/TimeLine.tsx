@@ -1,12 +1,4 @@
-import {
-  BoxProps,
-  Flex,
-  FlexProps,
-  Icon,
-  List,
-  ListItem,
-  ListProps,
-} from "@chakra-ui/react";
+import { List, ListProps } from "@chakra-ui/react";
 import React from "react";
 import timelineData from "../data/timeline.data";
 import TimeLineEvent from "./TimeLineEvent";
@@ -34,10 +26,18 @@ const TimeLine: React.FC<Props> = ({}) => {
             >
               <TimeLineEvent event={data} />
             </TimeLineRow>
+
             {/* {data.steps?.map((subStep, index) => (
-              <Box key={index} paddingLeft={16}>
-                <TimeLineEvent event={subStep} />
-              </Box>
+              <TimeLineRow
+                key={index}
+                event={subStep}
+                isEven={false}
+                isFirst={false}
+                isLast={false}
+                isNested={true}
+              >
+                <TimeLineEvent event={data} />
+              </TimeLineRow>
             ))} */}
           </>
         );

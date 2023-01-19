@@ -1,4 +1,4 @@
-import { Flex, FlexProps, Icon } from "@chakra-ui/react";
+import { Flex, FlexProps, Icon, IconProps } from "@chakra-ui/react";
 import React from "react";
 import { IconType } from "react-icons";
 
@@ -11,19 +11,23 @@ const Line: React.FC<LineProps> = ({ color }) => (
 );
 
 interface Props {
+  isEven: boolean;
   isFirst: boolean;
   isLast: boolean;
   color: string;
   logo: IconType;
+  hideLogo?: boolean;
 }
 
 const TimeLineRowDecoration: React.FC<Props> = ({
+  isEven,
   isFirst,
   isLast,
   color,
   logo,
+  hideLogo = false,
 }) => {
-  const iconSize = { base: 8, lg: 12 };
+  const iconSize = isFirst || isLast ? 12 : 8;
   const iconContainerStyle: FlexProps = {
     flexDirection: "column",
     alignItems: "center",
@@ -31,11 +35,16 @@ const TimeLineRowDecoration: React.FC<Props> = ({
     justifyItems: "stretch",
     minH: { base: 36 },
   };
+  const iconStyle: IconProps = {
+    boxSize: 8,
+    color,
+    // transform: !isFirst && !isLast && isEven ? "rotate(90deg)" : undefined,
+  };
 
   return (
     <Flex {...iconContainerStyle} paddingX={4}>
       <Line color={isFirst ? "transparent" : color} />
-      <Icon boxSize={iconSize} as={logo} color={color} />
+      {!hideLogo && <Icon as={logo} {...iconStyle} />}
       <Line color={isLast ? "transparent" : color} />
     </Flex>
   );

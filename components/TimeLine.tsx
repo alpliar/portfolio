@@ -1,18 +1,44 @@
-import { List, ListProps } from "@chakra-ui/react";
+import { List, ListProps, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import timelineData from "../data/timeline.data";
-import TimeLineEvent from "./TimeLineEvent";
 import TimeLineRow from "./TimeLineRow";
 
 type Props = {};
 
 const TimeLine: React.FC<Props> = ({}) => {
-  const containerStyle: ListProps = { margin: { base: "auto", lg: 0 } };
+  const highlightColor = useColorModeValue("purple", "gold");
+  const listStyle: ListProps = {
+    transition: "all 0.5s",
+    spacing: 4,
+    position: "relative",
+    width: "full",
+    maxWidth: "container.lg",
+    margin: "0 auto",
+    paddingX: 4,
+    paddingY: 0,
+    _after: {
+      base: {
+        transition: "all 1s",
+        content: '""',
+        position: "absolute",
+        width: 2,
+        background: highlightColor,
+        top: 0,
+        bottom: 0,
+        left: 8,
+        marginLeft: -1,
+      },
+      md: {
+        transition: "all 1s",
+        left: "50%",
+      },
+    },
+  };
 
   return (
-    <List {...containerStyle}>
+    <List {...listStyle}>
       {timelineData.map((data, index) => {
-        const isEven = index % 2 === 0;
+        const isEven = (index + 1) % 2 === 0;
         const isFirst = index === 0;
         const isLast = index === timelineData.length - 1;
 
@@ -23,9 +49,8 @@ const TimeLine: React.FC<Props> = ({}) => {
               isFirst={isFirst}
               isLast={isLast}
               event={data}
-            >
-              <TimeLineEvent event={data} />
-            </TimeLineRow>
+              highlightColor={highlightColor}
+            />
 
             {/* {data.steps?.map((subStep, index) => (
               <TimeLineRow

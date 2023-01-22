@@ -1,15 +1,9 @@
-import {
-  BsFillCircleFill,
-  BsFillCloudUploadFill,
-  BsFillRecordCircleFill,
-  BsFillSlashCircleFill,
-  BsFillStopCircleFill,
-} from "react-icons/bs";
+import { BsFillCloudUploadFill, BsFillCursorFill } from "react-icons/bs";
 import { MdSchool } from "react-icons/md";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import { Timeline } from "../models/TimelineData.model";
 
-const jobIcon = BsFillStopCircleFill;
+const jobIcon = BsFillCursorFill;
 const missionIcon = VscDebugBreakpointLog;
 const schoolIcon = MdSchool;
 const searchingIcon = BsFillCloudUploadFill;

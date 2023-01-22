@@ -1,4 +1,4 @@
-import { List, ListProps, useColorModeValue } from "@chakra-ui/react";
+import { List, ListProps } from "@chakra-ui/react";
 import React from "react";
 import timelineData from "../data/timeline.data";
 import TimeLineRow from "./TimeLineRow";
@@ -6,7 +6,6 @@ import TimeLineRow from "./TimeLineRow";
 type Props = {};
 
 const TimeLine: React.FC<Props> = ({}) => {
-  const highlightColor = useColorModeValue("purple", "gold");
   const listStyle: ListProps = {
     transition: "all 0.5s",
     spacing: 4,
@@ -22,7 +21,7 @@ const TimeLine: React.FC<Props> = ({}) => {
         content: '""',
         position: "absolute",
         width: 2,
-        background: highlightColor,
+        background: "primary",
         top: 0,
         bottom: 0,
         left: 8,
@@ -49,7 +48,6 @@ const TimeLine: React.FC<Props> = ({}) => {
               isFirst={isFirst}
               isLast={isLast}
               event={data}
-              highlightColor={highlightColor}
             />
 
             {/* {data.steps?.map((subStep, index) => (

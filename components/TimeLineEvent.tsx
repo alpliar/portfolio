@@ -17,10 +17,9 @@ import { TimelineData } from "../models/TimelineData.model";
 interface Props {
   event: TimelineData;
   isEven: boolean;
-  highlightColor: string;
 }
 
-const TimeLineEvent: React.FC<Props> = ({ event, isEven, highlightColor }) => {
+const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
   const { position, company, date, color, logo, description } = event;
   const dateAbsoluteStyle: TextProps = {
     position: "absolute",
@@ -35,7 +34,7 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven, highlightColor }) => {
     isTruncated: true,
   };
   const dateBaseStyle: TextProps = {
-    color: highlightColor,
+    color: "primary",
     fontSize: "sm",
     fontWeight: "bold",
     textTransform: "uppercase",
@@ -54,7 +53,7 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven, highlightColor }) => {
   const iconStyle: IconProps = {
     transition: "all 1s",
     boxSize: iconSize,
-    color: highlightColor,
+    color: "primary",
     position: "absolute",
     display: "inline-block",
     width: iconSize,
@@ -62,7 +61,7 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven, highlightColor }) => {
     padding: 1.5,
     top: `calc(50% - var(--chakra-sizes-${iconSize / 2}))`,
     borderWidth: 2,
-    borderColor: highlightColor, //color,
+    borderColor: "primary", //color,
     borderRadius: "full",
     fontSize: "18px",
     zIndex: 1,
@@ -81,7 +80,7 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven, highlightColor }) => {
   const positionStyle: HeadingProps = {
     fontSize: "lg",
     // fontWeight: "normal",
-    color: highlightColor,
+    color: "primary",
   };
 
   return (

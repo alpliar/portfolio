@@ -1,8 +1,7 @@
-import { chakra, Link as UiLink, Icon, LinkProps } from "@chakra-ui/react";
+import { chakra, Icon, Link as UiLink, LinkProps } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { PropsWithChildren, ReactNode } from "react";
+import { ReactNode } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { isExternal } from "util/types";
 
 interface ILinkProps {
   children: ReactNode;
@@ -24,6 +23,8 @@ const Link: React.FC<ILinkProps> = ({
         href={href}
         isExternal={isExternal}
         variant={variant}
+        display="flex"
+        alignItems="center"
       >
         {children}
         {` `}

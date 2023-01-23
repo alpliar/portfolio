@@ -16,12 +16,12 @@ const TimeLine: React.FC<Props> = ({}) => {
     paddingX: 4,
     paddingY: 0,
     _after: {
-      base: {
+      sm: {
         transition: "all 1s",
         content: '""',
         position: "absolute",
         width: 2,
-        background: "primary",
+        background: "secondary",
         top: 0,
         bottom: 0,
         left: 8,

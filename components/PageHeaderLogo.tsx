@@ -8,7 +8,7 @@ const PageHeaderLogo: React.FC<Props> = ({}) => {
   return (
     <HStack>
       <Avatar src="/avatar.webp" />
-      <Heading>Alpliar</Heading>
+      <Heading>Alexandre&apos;s portfolio</Heading>
     </HStack>
   );
 };

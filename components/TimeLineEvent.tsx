@@ -2,8 +2,10 @@ import {
   Box,
   Card,
   CardBody,
+  Flex,
   Heading,
   HeadingProps,
+  HStack,
   Icon,
   IconProps,
   Stack,
@@ -47,15 +49,16 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
   const iconSize: IconProps["boxSize"] =
     useBreakpointValue({
       base: 8,
+      sm: 8,
       md: 12,
     }) || 8;
 
   const iconStyle: IconProps = {
     transition: "all 1s",
+    position: { sm: "absolute" },
+    display: { base: "none", sm: "inline-block" },
     boxSize: iconSize,
     color: "primary",
-    position: "absolute",
-    display: "inline-block",
     width: iconSize,
     height: iconSize,
     padding: 1.5,
@@ -67,8 +70,8 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
     zIndex: 1,
   };
   const iconResponsiveProps: IconProps = useBreakpointValue({
-    base: {
-      left: 14,
+    sm: {
+      left: 16,
     },
     md: {
       left: isEven ? 14 : undefined,
@@ -88,8 +91,8 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
       <Text {...dateBaseStyle} {...dateStyle}>
         {date}
       </Text>
-      <Icon as={logo} {...iconStyle} {...iconResponsiveProps} />
       <Stack>
+        <Icon as={logo} {...iconStyle} {...iconResponsiveProps} />
         <Heading {...positionStyle}>{position}</Heading>
         <Text>{company}</Text>
         <Text>{description}</Text>

@@ -2,8 +2,6 @@ import { Wrap, WrapItem } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import Link from "../components/Link";
 
-type Props = {};
-
 type HeaderLinkProps = {
   href: string;
   children: ReactNode;

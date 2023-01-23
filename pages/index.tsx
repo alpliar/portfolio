@@ -1,11 +1,4 @@
-import {
-  Box,
-  Center,
-  Heading,
-  Text,
-  useColorMode,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Center, Heading, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import PageLayout from "../layouts/PageLayout";
 

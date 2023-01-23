@@ -5,10 +5,10 @@ import { sizes } from "./sizes";
 import { breakpoints } from "./breakpoints";
 
 const theme = extendTheme({
-  semanticTokens,
-  components,
   // sizes,
   breakpoints,
+  components,
+  semanticTokens,
 });
 
 export default theme;

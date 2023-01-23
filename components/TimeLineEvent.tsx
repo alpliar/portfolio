@@ -9,6 +9,7 @@ import {
   Icon,
   IconProps,
   Stack,
+  StackProps,
   Text,
   TextProps,
   useBreakpointValue,
@@ -23,50 +24,86 @@ interface Props {
 
 const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
   const { position, company, date, color, logo, description } = event;
-  const dateAbsoluteStyle: TextProps = {
-    position: "absolute",
-    display: "inline-block",
-    top: "calc(50% - var(--chakra-sizes-2))",
-    textAlign: isEven ? "end" : "start",
-    lineHeight: 4,
-    zIndex: 1,
-    width: 28,
-    left: isEven ? -32 : undefined,
-    right: !isEven ? -32 : undefined,
-    isTruncated: true,
-  };
-  const dateBaseStyle: TextProps = {
+
+  const mdDateHeight = 8;
+  const mdDateWidth = 28;
+  const mdDateOffset = mdDateWidth + mdDateHeight / 2;
+  const lgDateHeight = 8;
+  const lgDateWidth = 40;
+  const lgDateOffset = 48;
+
+  const dateStyle: TextProps = {
     color: "primary",
-    fontSize: "sm",
+    display: {
+      md: "inline-block",
+    },
+    fontFamily: "monospace",
+    fontSize: {
+      base: "sm",
+      lg: "xl",
+    },
     fontWeight: "bold",
-    textTransform: "uppercase",
-    letterSpacing: 0.5,
+    left: {
+      lg: isEven ? -lgDateOffset : undefined,
+      md: isEven ? -mdDateOffset : undefined,
+    },
+    // letterSpacing: 0,
+    lineHeight: {
+      lg: lgDateHeight,
+      md: mdDateHeight,
+    },
+    position: {
+      md: "absolute",
+    },
+    right: {
+      lg: !isEven ? -lgDateOffset : undefined,
+      md: !isEven ? -mdDateOffset : undefined,
+    },
+    textAlign: {
+      md: isEven ? "end" : "start",
+    },
+    textTransform: "lowercase",
+    top: {
+      md: `calc(50% - var(--chakra-sizes-${mdDateHeight / 2}))`,
+    },
+    transition: "all 1s",
+    width: {
+      lg: lgDateWidth,
+      md: mdDateWidth,
+    },
+    zIndex: {
+      md: 1,
+    },
   };
-  const dateStyle: TextProps = useBreakpointValue({
-    md: dateAbsoluteStyle,
-  }) as TextProps;
 
   const iconSize: IconProps["boxSize"] =
     useBreakpointValue({
       base: 8,
       sm: 8,
       md: 12,
+      lg: 14,
     }) || 8;
 
   const iconStyle: IconProps = {
-    transition: "all 1s",
-    position: { sm: "absolute" },
-    display: { base: "none", sm: "inline-block" },
+    borderColor: "primary",
+    // color,
+    borderRadius: "full",
+    borderWidth: 2,
     boxSize: iconSize,
     color: "primary",
-    width: iconSize,
+    display: {
+      base: "none",
+      sm: "inline-block",
+    },
+    fontSize: "18px",
     height: iconSize,
     padding: 1.5,
+    position: {
+      sm: "absolute",
+    },
     top: `calc(50% - var(--chakra-sizes-${iconSize / 2}))`,
-    borderWidth: 2,
-    borderColor: "primary", //color,
-    borderRadius: "full",
-    fontSize: "18px",
+    transition: "all 1s",
+    width: iconSize,
     zIndex: 1,
   };
   const iconResponsiveProps: IconProps = useBreakpointValue({
@@ -74,25 +111,34 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
       left: 16,
     },
     md: {
-      left: isEven ? 14 : undefined,
-      right: 14,
       textAlign: isEven ? "start" : "end",
+      right: 12,
+      left: isEven ? 12 : undefined,
+    },
+    lg: {
+      textAlign: isEven ? "start" : "end",
+      right: 16,
+      left: isEven ? 16 : undefined,
     },
   }) as IconProps;
 
   const positionStyle: HeadingProps = {
-    fontSize: "lg",
-    // fontWeight: "normal",
     color: "primary",
+    fontSize: {
+      base: "md",
+      sm: "xl",
+    },
+  };
+
+  const contentStyle: StackProps = {
+    transform: { lg: "rotate(1deg)" },
   };
 
   return (
     <>
-      <Text {...dateBaseStyle} {...dateStyle}>
-        {date}
-      </Text>
-      <Stack>
-        <Icon as={logo} {...iconStyle} {...iconResponsiveProps} />
+      <Text {...dateStyle}>{date}</Text>
+      <Icon as={logo} {...iconStyle} {...iconResponsiveProps} />
+      <Stack {...contentStyle}>
         <Heading {...positionStyle}>{position}</Heading>
         <Text>{company}</Text>
         <Text>{description}</Text>

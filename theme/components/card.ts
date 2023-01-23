@@ -8,8 +8,7 @@ const baseStyle = definePartsStyle({
   // define the part you're going to style
   container: {
     backgroundColor: "chakra-card-bg",
-  },
-  // header: {
+  }, // header: {
   //   paddingBottom: "2px",
   // },
   // body: {

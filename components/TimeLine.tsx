@@ -7,31 +7,31 @@ type Props = {};
 
 const TimeLine: React.FC<Props> = ({}) => {
   const listStyle: ListProps = {
-    transition: "all 0.5s",
-    spacing: 4,
-    position: "relative",
-    width: "full",
-    maxWidth: "container.lg",
-    margin: "0 auto",
-    paddingX: 4,
-    paddingY: 0,
     _after: {
-      sm: {
+      md: {
+        left: "50%",
         transition: "all 1s",
-        content: '""',
-        position: "absolute",
-        width: 2,
+      },
+      sm: {
         background: "secondary",
-        top: 0,
         bottom: 0,
+        content: '""',
         left: 8,
         marginLeft: -1,
-      },
-      md: {
+        position: "absolute",
+        top: 0,
         transition: "all 1s",
-        left: "50%",
+        width: 2,
       },
     },
+    margin: "0 auto",
+    maxWidth: "container.lg",
+    paddingX: 4,
+    paddingY: 0,
+    position: "relative",
+    spacing: 4,
+    transition: "all 1s",
+    width: "full",
   };
 
   return (

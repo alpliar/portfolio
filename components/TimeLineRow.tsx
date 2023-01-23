@@ -3,6 +3,7 @@ import {
   BoxProps,
   Card,
   CardBody,
+  CardBodyProps,
   Flex,
   FlexProps,
   ListItem,
@@ -21,60 +22,109 @@ interface Props {
 }
 
 const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
-  const style: FlexProps = {
-    position: "relative",
-    width: { base: "full", md: "50%" },
-    left: { base: 0, md: !isEven ? 0 : "50%" },
-    paddingY: { md: 3 },
-    paddingX: { md: 6 },
-    paddingLeft: { sm: 12 },
-    // paddingRight: { base: 6 },
-    transition: "all 1s",
-    _before: {
-      sm: {
-        content: '""',
-        position: "absolute",
-        width: { base: 12, md: 12 },
-        height: 0.5,
-        top: `calc(50% - var(--chakra-sizes-0-5))`,
-        right: { base: 2, md: !isEven ? 2 : "auto" },
-        left: { base: 4, md: isEven ? 2 : "auto" },
-        background: "primary",
-        zIndex: 1,
-      },
-    },
+  const rowStyle: FlexProps = {
     _after: {
       sm: {
-        content: '""',
-        position: "absolute",
-        width: 4,
-        height: 4,
-        top: "calc(50% - 8px)",
-        right: { base: "-8px", md: !isEven ? -2 : "auto" },
-        left: { base: 2, md: isEven ? -2 : "auto" },
-        background: "chakra-body-bg",
-        borderWidth: 2,
+        // background: "chakra-body-bg",
+        backgroundColor: "primary",
         borderColor: "primary",
         borderRadius: "16px",
-        zIndex: 1,
+        borderWidth: 2,
+        content: '""',
+        height: 4,
+        left: {
+          base: 2,
+          md: isEven ? -2 : "auto",
+        },
+        position: "absolute",
+        right: {
+          base: "-8px",
+          md: !isEven ? -2 : "auto",
+        },
+        top: "calc(50% - 8px)",
         transition: "all 1s",
+        width: 4,
+        zIndex: 1,
       },
     },
+    _before: {
+      sm: {
+        background: "primary",
+        content: '""',
+        height: 0.5,
+        left: {
+          base: 4,
+          md: isEven ? 2 : "auto",
+        },
+        position: "absolute",
+        right: {
+          base: 2,
+          md: !isEven ? 2 : "auto",
+        },
+        top: `calc(50% - var(--chakra-sizes-0-5))`,
+        transition: "all 1s",
+        width: {
+          base: 12,
+          lg: 14,
+          md: 10,
+        },
+        zIndex: 1,
+      },
+    },
+    left: {
+      base: 0,
+      md: !isEven ? 0 : "50%",
+    },
+    paddingLeft: {
+      sm: 12,
+    },
+    paddingX: {
+      md: 6,
+    },
+    paddingY: {
+      md: 3,
+    },
+    position: "relative",
+    transform: {
+      lg: "rotate(-1deg)",
+    },
+    // paddingRight: { base: 6 },
+    transition: "all 1s",
+    width: {
+      base: "full",
+      md: "50%",
+    },
+    zIndex: 1,
   };
 
   const cardStyle: BoxProps = {
+    // backgroundColor: isEven ? "chakra-card-bg" : "chakra-card-secondary-bg",
+    padding: {
+      base: 4,
+      sm: 6,
+      lg: 12,
+    },
+    paddingLeft: {
+      lg: isEven ? 32 : 12,
+      md: isEven ? 24 : 6,
+      sm: 16,
+    },
+    paddingRight: {
+      md: !isEven ? 24 : undefined,
+    },
     position: "initial",
+    transition: "all 1s",
     width: "full",
-    padding: { base: 4, sm: 6 },
-    paddingLeft: { sm: 16, md: isEven ? 24 : 6 },
-    paddingRight: { md: !isEven ? 24 : undefined },
-    transition: "all 0.5s",
+  };
+
+  const cardBodyStyle: CardBodyProps = {
+    padding: 0,
   };
 
   return (
-    <Flex as={ListItem} p={0} {...style}>
+    <Flex as={ListItem} p={0} {...rowStyle}>
       <Card {...cardStyle}>
-        <CardBody p={0}>
+        <CardBody {...cardBodyStyle}>
           <TimeLineEvent event={event} isEven={isEven} />
         </CardBody>
       </Card>

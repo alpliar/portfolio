@@ -1,6 +1,6 @@
-import { FaLinkedin, FaMugHot, FaRunning, FaWalking } from "react-icons/fa";
+import { FaLinkedin, FaMugHot, FaWalking } from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
-import { VscDebugBreakpointLog } from "react-icons/vsc";
+import { TbDeviceFloppy } from "react-icons/tb";
 import { Timeline } from "../models/TimelineData.model";
 
 const jobIcon = FaWalking;
@@ -22,7 +22,8 @@ const timelineData: Timeline = [
     date: "Today",
     position: "Looking for opportunities",
     company: "Pole emploi",
-    description: "Lyon, France",
+    description:
+      "Direct-relation, part-time or full time. Industry : social, culture, education, environment, solidarity, open-source. Technical stack : React, Next.js, Node.js, TypeScript",
   },
   {
     logo: jobIcon,
@@ -143,6 +144,14 @@ const timelineData: Timeline = [
     position: "Bachelor of Technology",
     company: "Université Paris Cité",
     description: "",
+  },
+  {
+    logo: TbDeviceFloppy,
+    color: studyColor,
+    date: "before 2005",
+    position: "Debut",
+    company: "Amstrad CPC 6128+",
+    description: "...",
   },
 ];
 

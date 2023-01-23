@@ -1,12 +1,12 @@
-import { BsFillCloudUploadFill, BsFillCursorFill } from "react-icons/bs";
+import { FaLinkedin, FaMugHot, FaRunning, FaWalking } from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import { Timeline } from "../models/TimelineData.model";
 
-const jobIcon = BsFillCursorFill;
-const missionIcon = VscDebugBreakpointLog;
+const jobIcon = FaWalking;
+const missionIcon = FaMugHot;
 const schoolIcon = MdSchool;
-const searchingIcon = BsFillCloudUploadFill;
+const searchingIcon = FaLinkedin;
 
 const recentEventColor = "orange.800";
 const extiaColors = "orange.700";

@@ -26,6 +26,10 @@ const colors = {
     _dark: "cyan.800",
     _light: "purple.200",
   },
+  alpha: {
+    _dark: "whiteAlpha.50",
+    _light: "blackAlpha.50",
+  },
 };
 
 export default colors;

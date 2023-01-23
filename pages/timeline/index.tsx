@@ -4,11 +4,7 @@ import PageLayout from "../../layouts/PageLayout";
 type Props = {};
 
 const TimelinePage: React.FC<Props> = () => {
-  return (
-    <PageLayout>
-      <TimeLine />
-    </PageLayout>
-  );
+  return <TimeLine />;
 };
 
 export default TimelinePage;

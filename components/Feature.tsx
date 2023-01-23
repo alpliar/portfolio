@@ -30,6 +30,7 @@ const Feature: React.FC<FeatureProps> = ({ children, icon, title }) => {
   const titleStyle: HeadingProps = {
     color: "primary",
     fontSize: "lg",
+    fontFamily: "monospace",
     lineHeight: iconSize,
     verticalAlign: "center",
   };

@@ -111,6 +111,7 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
     },
     paddingRight: {
       md: !isEven ? 24 : undefined,
+      lg: !isEven ? 28 : undefined,
     },
     position: "initial",
     transition: "all 1s",

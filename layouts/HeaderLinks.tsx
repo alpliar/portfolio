@@ -1,5 +1,6 @@
-import { Wrap, WrapItem } from "@chakra-ui/react";
+import { Flex, Icon, VisuallyHidden, Wrap, WrapItem } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
+import { FaLinkedin } from "react-icons/fa";
 import Link from "../components/Link";
 
 type HeaderLinkProps = {
@@ -20,7 +21,10 @@ const HeaderLinks = ({}) => {
       <HeaderLink href="/skills">Skills</HeaderLink>
       <HeaderLink href="/projects">Projects</HeaderLink>
       <HeaderLink href="/timeline">Timeline</HeaderLink>
-      <HeaderLink href="/">Socials</HeaderLink>
+      <Flex as={Link} href="https://www.linkedin.com/in/alexandrepl/">
+        <Icon as={FaLinkedin} />
+        <VisuallyHidden>LinkedIn</VisuallyHidden>
+      </Flex>
     </Wrap>
   );
 };

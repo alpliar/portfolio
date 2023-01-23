@@ -7,8 +7,8 @@ import {
   SiSvelte,
   SiTypescript,
 } from "react-icons/si";
-import Feature from "../../components/Feature";
-import Features from "../../layouts/Features";
+import Feature from "../components/Feature";
+import Features from "../layouts/Features";
 
 type Props = {};
 const SkillsPage: React.FC<Props> = ({}) => {

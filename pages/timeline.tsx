@@ -1,5 +1,5 @@
-import TimeLine from "../../components/TimeLine";
-import PageLayout from "../../layouts/PageLayout";
+import TimeLine from "../components/TimeLine";
+import PageLayout from "../layouts/PageLayout";
 
 type Props = {};
 

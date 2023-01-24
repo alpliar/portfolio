@@ -20,7 +20,7 @@ const HeaderLinks = ({}) => {
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/skills">Skills</HeaderLink>
       <HeaderLink href="/projects">Projects</HeaderLink>
-      <HeaderLink href="/timeline">Timeline</HeaderLink>
+      <HeaderLink href="/experience">Experience</HeaderLink>
       <Flex as={Link} href="https://www.linkedin.com/in/alexandrepl/">
         <Icon as={FaLinkedin} />
         <VisuallyHidden>LinkedIn</VisuallyHidden>

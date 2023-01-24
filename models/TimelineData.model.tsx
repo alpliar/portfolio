@@ -1,5 +1,9 @@
 import { IconType } from "react-icons";
 
+export interface Technology {
+  label: string;
+  icon: IconType;
+}
 export interface TimelineData {
   logo: IconType;
   position: string;
@@ -8,6 +12,7 @@ export interface TimelineData {
   date: string;
   color: string;
   steps?: Timeline;
+  technologies?: Technology[];
 }
 
 export type Timeline = TimelineData[];

@@ -1,5 +1,35 @@
-import { FaLinkedin, FaMugHot, FaWalking } from "react-icons/fa";
+import {
+  FaLightbulb,
+  FaLinkedin,
+  FaMugHot,
+  FaTags,
+  FaWalking,
+} from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
+import {
+  SiConfluence,
+  SiCplusplus,
+  SiCss3,
+  SiDotnet,
+  SiEslint,
+  SiGoogletagmanager,
+  SiHackthebox,
+  SiHtml5,
+  SiJava,
+  SiJavascript,
+  SiJira,
+  SiNpm,
+  SiNuxtdotjs,
+  SiPhp,
+  SiPostgresql,
+  SiPrettier,
+  SiReact,
+  SiSvelte,
+  SiTypescript,
+  SiVisualstudiocode,
+  SiVuedotjs,
+  SiVuetify,
+} from "react-icons/si";
 import { TbDeviceFloppy } from "react-icons/tb";
 import { Timeline } from "../models/TimelineData.model";
 
@@ -29,9 +59,16 @@ const timelineData: Timeline = [
     logo: jobIcon,
     color: extiaColors,
     date: "2020 to 2021",
-    position: "Frontend developer",
-    company: "Extia",
-    description: "",
+    position: "Developing React & Vue websites",
+    company: "Extia, Lille, France",
+    description: "Learned TypeScript, Angular, Nuxt",
+    technologies: [
+      { label: "Nuxt.js", icon: SiNuxtdotjs },
+      { label: "Vue.js", icon: SiVuedotjs },
+      { label: "React", icon: SiReact },
+      { label: "Vuetify", icon: SiVuetify },
+      { label: "Typescript", icon: SiTypescript },
+    ],
     steps: [
       {
         logo: missionIcon,
@@ -60,12 +97,39 @@ const timelineData: Timeline = [
     ],
   },
   {
+    logo: FaLightbulb,
+    color: hrTeamColors,
+    date: "2020",
+    position: "Formation React, Svelte, Vue, ...",
+    company: "wfh",
+    description: "",
+    technologies: [
+      { label: "Visual code", icon: SiVisualstudiocode },
+      { label: "React", icon: SiReact },
+      { label: "Svelte", icon: SiSvelte },
+      { label: "Vue.js", icon: SiVuedotjs },
+      { label: "ES6", icon: SiJavascript },
+      { label: "NPM", icon: SiNpm },
+      { label: "Prettier", icon: SiPrettier },
+      { label: "ESLint", icon: SiEslint },
+    ],
+  },
+  {
     logo: jobIcon,
     color: hrTeamColors,
     date: "2018 to 2020",
-    position: "Frontend engineer",
-    company: "HR Team",
+    position: "Devops for retail websites",
+    company: "HR Team, Lille, France",
     description: "",
+    technologies: [
+      { label: "ES6", icon: SiJavascript },
+      { label: "Confluence", icon: SiConfluence },
+      { label: ".net", icon: SiDotnet },
+      { label: "Jira", icon: SiJira },
+      { label: "Confluence", icon: SiConfluence },
+      { label: "GTM", icon: SiGoogletagmanager },
+      { label: "TagCommander", icon: FaTags },
+    ],
     steps: [
       {
         logo: missionIcon,
@@ -74,6 +138,7 @@ const timelineData: Timeline = [
         position: "Technical project manager",
         company: "La Redoute",
         description: "",
+        technologies: [{ label: "PostgreSQL", icon: SiPostgresql }],
       },
       {
         logo: missionIcon,
@@ -89,9 +154,15 @@ const timelineData: Timeline = [
     logo: jobIcon,
     color: gfiColors,
     date: "2010 to 2018",
-    position: "Software engineer",
-    company: "Gfi world",
+    position: "Developping and debugging of JS and native apps",
+    company: "Gfi world, Lille, France",
     description: "",
+    technologies: [
+      { label: "Jira", icon: SiJira },
+      { label: "Java", icon: SiJava },
+      { label: "JavaScript", icon: SiJavascript },
+      { label: "NSDK", icon: SiHackthebox },
+    ],
     steps: [
       {
         logo: missionIcon,
@@ -100,6 +171,11 @@ const timelineData: Timeline = [
         position: "Technical support engineer",
         company: "Decathlon",
         description: "",
+        technologies: [
+          { label: "Jira", icon: SiJira },
+          { label: "Java", icon: SiJava },
+          { label: "JavaScript", icon: SiJavascript },
+        ],
       },
       {
         logo: missionIcon,
@@ -115,9 +191,13 @@ const timelineData: Timeline = [
     logo: jobIcon,
     color: natSysColors,
     date: "2008 to 2009",
-    position: "Software engineer",
-    company: "Nat System",
+    position: "Developing management software for banks & insurances",
+    company: "Nat System, Paris, France",
     description: "",
+    technologies: [
+      { label: "NSDK", icon: SiHackthebox },
+      { label: "NatStar", icon: SiHackthebox },
+    ],
     steps: [
       {
         logo: missionIcon,
@@ -142,8 +222,16 @@ const timelineData: Timeline = [
     color: studyColor,
     date: "2007",
     position: "Bachelor of Technology",
-    company: "Université Paris Cité",
+    company: "Université Paris Cité, Champs-sur-Marne, France",
     description: "",
+    technologies: [
+      { label: "C++", icon: SiCplusplus },
+      { label: "Java", icon: SiJava },
+      { label: "JavaScript", icon: SiJavascript },
+      { label: "PHP", icon: SiPhp },
+      { label: "HTML", icon: SiHtml5 },
+      { label: "CSS", icon: SiCss3 },
+    ],
   },
   {
     logo: TbDeviceFloppy,

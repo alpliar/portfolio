@@ -1,15 +1,16 @@
 import { Box } from "@chakra-ui/react";
-import { GiAnticlockwiseRotation } from "react-icons/gi";
-import Feature from "../components/Feature";
 import TimeLine from "../components/TimeLine";
 import Features from "../layouts/Features";
-import PageLayout from "../layouts/PageLayout";
 
 type Props = {};
 
-const TimelinePage: React.FC<Props> = () => {
+const ExperiencePage: React.FC<Props> = () => {
   return (
-    <Features title="Timeline" subtitle="Lorem ipsfazza faz faz" columns={1}>
+    <Features
+      title="Experience"
+      subtitle="From most recent to oldest"
+      columns={1}
+    >
       <Box
         marginX={{
           base: -4,
@@ -24,4 +25,4 @@ const TimelinePage: React.FC<Props> = () => {
   );
 };
 
-export default TimelinePage;
+export default ExperiencePage;

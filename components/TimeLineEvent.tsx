@@ -10,9 +10,13 @@ import {
   IconProps,
   Stack,
   StackProps,
+  Tag,
+  TagLabel,
+  TagLeftIcon,
   Text,
   TextProps,
   useBreakpointValue,
+  Wrap,
 } from "@chakra-ui/react";
 import React from "react";
 import { TimelineData } from "../models/TimelineData.model";
@@ -23,7 +27,8 @@ interface Props {
 }
 
 const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
-  const { position, company, date, color, logo, description } = event;
+  const { position, company, date, color, logo, description, technologies } =
+    event;
 
   const mdDateHeight = 8;
   const mdDateWidth = 28;
@@ -142,6 +147,17 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
         <Heading {...positionStyle}>{position}</Heading>
         <Text>{company}</Text>
         <Text>{description}</Text>
+        {technologies && (
+          <Wrap>
+            {/* <Text>Learned</Text> */}
+            {technologies.map((tech, index) => (
+              <Tag key={index} size="lg">
+                <TagLeftIcon color="currentColor" boxSize={6} as={tech.icon} />
+                <TagLabel>{tech.label}</TagLabel>
+              </Tag>
+            ))}
+          </Wrap>
+        )}
       </Stack>
     </>
   );

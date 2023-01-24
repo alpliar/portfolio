@@ -42,6 +42,10 @@ const colors = {
     _dark: "gray.800",
     _light: "white",
   },
+  important: {
+    _dark: "cyan.500",
+    _light: "pink.500",
+  },
 };
 
 export default colors;

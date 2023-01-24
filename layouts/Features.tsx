@@ -51,29 +51,44 @@ const Features: React.FC<FeaturesProps> = ({
       {children}
     </Stack>
   );
+  const childrenContainerStyle = {
+    padding: {
+      base: 2,
+      lg: 8,
+      md: 4,
+    },
+    // marginTop: 8,
+    spacing: 8,
+    transition: "all 1s",
+  };
   return (
-    <Flex justifyContent="center" alignItems="center">
-      <Box py={12} bgColor="chakra-card-bg" rounded="xl">
-        <Box
-          maxW="7xl"
-          mx="auto"
-          px={{
-            base: 4,
-            sm: 8,
-            md: 16,
-            lg: 32,
-          }}
-          transition="all 1s"
-        >
+    <Box
+      as="main"
+      py={6}
+      bgColor="chakra-card-bg"
+      rounded="xl"
+      w="full"
+      maxW="7xl"
+      margin="auto"
+    >
+      <Box
+        w="full"
+        maxW={{ lg: "7xl" }}
+        mx="auto"
+        px={{
+          base: 4,
+          sm: 8,
+          md: 16,
+          lg: 32,
+        }}
+        transition="all 1s"
+      >
+        <Stack {...childrenContainerStyle}>
           <Header start={<PageHeaderLogo />} end={<PageHeaderEnd />} />
           <Center>
-            <Divider maxW={64} mt={8} mb={8} />
+            <Divider maxW={64} />
           </Center>
-          <Box
-            textAlign={{
-              lg: "center",
-            }}
-          >
+          <Flex direction="column" align={{ base: "left", md: "center" }}>
             <Heading
               as="h1"
               mt={2}
@@ -102,18 +117,12 @@ const Features: React.FC<FeaturesProps> = ({
             >
               {subtitle}
             </Text>
-          </Box>
+          </Flex>
 
-          <Center>
-            <Divider maxW={64} mt={8} mb={8} />
-          </Center>
-
-          <Stack mt={10}>
-            <FeaturesGrid>{children}</FeaturesGrid>
-          </Stack>
-        </Box>
+          <FeaturesGrid>{children}</FeaturesGrid>
+        </Stack>
       </Box>
-    </Flex>
+    </Box>
   );
 };
 

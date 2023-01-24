@@ -35,7 +35,6 @@ const ProjectsPage: React.FC<Props> = ({}) => {
             "SSG",
             "Vue",
             "Vuetify",
-            "Axios",
             "TypeScript",
             "Cypress",
           ]}
@@ -52,7 +51,6 @@ const ProjectsPage: React.FC<Props> = ({}) => {
             "Chakra UI",
             "Cypress",
             "SSR",
-            "Img optims",
           ]}
           icon={GiWatermelon}
           siteUrl="https://karpouzi.vercel.app/"

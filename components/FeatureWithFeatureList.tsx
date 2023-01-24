@@ -16,6 +16,7 @@ import {
 import React from "react";
 import { FaCheck, FaCode, FaGithub } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
+import Technologies from "./Technologies";
 
 interface FeatureWithFeatureListProps {
   description: string;
@@ -246,7 +247,8 @@ const FeatureWithFeatureList: React.FC<FeatureWithFeatureListProps> = ({
               </Button>
             )}
           </Wrap>
-          <SimpleGrid
+          <Technologies technologies={features} />
+          {/* <SimpleGrid
             columns={{ base: 1, lg: 2 }}
             flexGrow={1}
             spacing={5}
@@ -258,7 +260,7 @@ const FeatureWithFeatureList: React.FC<FeatureWithFeatureListProps> = ({
             {features.map((feature, index) => (
               <Feature key={index}>{feature}</Feature>
             ))}
-          </SimpleGrid>
+          </SimpleGrid> */}
         </SimpleGrid>
       </Flex>
     </>

@@ -47,6 +47,7 @@ const ProjectsPage: React.FC<Props> = ({}) => {
           features={[
             "React",
             "Next.js",
+            "GraphQL",
             "TypeScript",
             "Chakra UI",
             "Cypress",

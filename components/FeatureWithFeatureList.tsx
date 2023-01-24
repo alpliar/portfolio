@@ -126,7 +126,6 @@ const FeatureWithFeatureList: React.FC<FeatureWithFeatureListProps> = ({
               mb={3}
               fontSize={{
                 base: "3xl",
-                md: "4xl",
               }}
               fontWeight="extrabold"
               color="primary"

@@ -1,5 +1,6 @@
 import { Box, Center, Heading, Text } from "@chakra-ui/react";
 import Head from "next/head";
+import Features from "../layouts/Features";
 import PageLayout from "../layouts/PageLayout";
 
 export default function Home() {
@@ -11,12 +12,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Center minH={96}>
-        <Box color="primary">
-          <Heading as="h1">Alexandre</Heading>
-          <Text>Senior software engineer</Text>
-        </Box>
-      </Center>
+      <Features title="Alexandre" subtitle="Senior software engineer">
+        <></>
+      </Features>
     </>
   );
 }

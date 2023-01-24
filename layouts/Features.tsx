@@ -1,5 +1,16 @@
-import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Divider,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import React, { ReactNode } from "react";
+import PageHeaderEnd from "../components/PageHeaderEnd";
+import PageHeaderLogo from "../components/PageHeaderLogo";
+import Header from "./Header";
 
 interface FeaturesGridProps {
   children: ReactNode;
@@ -54,6 +65,10 @@ const Features: React.FC<FeaturesProps> = ({
           }}
           transition="all 1s"
         >
+          <Header start={<PageHeaderLogo />} end={<PageHeaderEnd />} />
+          <Center>
+            <Divider maxW={64} mt={8} mb={8} />
+          </Center>
           <Box
             textAlign={{
               lg: "center",
@@ -88,6 +103,10 @@ const Features: React.FC<FeaturesProps> = ({
               {subtitle}
             </Text>
           </Box>
+
+          <Center>
+            <Divider maxW={64} mt={8} mb={8} />
+          </Center>
 
           <Stack mt={10}>
             <FeaturesGrid>{children}</FeaturesGrid>

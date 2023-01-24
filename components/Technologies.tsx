@@ -5,16 +5,20 @@ import { FaTags } from "react-icons/fa";
 import {
   SiChakraui,
   SiConfluence,
+  SiCplusplus,
   SiCss3,
   SiCypress,
   SiDotnet,
   SiEslint,
+  SiGoogleanalytics,
   SiGoogletagmanager,
+  SiGraphql,
   SiHackthebox,
   SiHtml5,
   SiJava,
   SiJavascript,
   SiJira,
+  SiLua,
   SiNextdotjs,
   SiNodedotjs,
   SiNpm,
@@ -51,6 +55,8 @@ const getIcon = (label: string): IconType => {
       return SiNuxtdotjs;
     case "NPM":
       return SiNpm;
+    case "C++":
+      return SiCplusplus;
     case "Node.js":
     case "NodeJS":
     case "Node":
@@ -92,9 +98,15 @@ const getIcon = (label: string): IconType => {
     case "Dotnet":
     case ".net":
       return SiDotnet;
+    case "GraphQL":
+      return SiGraphql;
+    case "Lua":
+      return SiLua;
     case "GTM":
     case "Google Tag Manager":
       return SiGoogletagmanager;
+    case "Google Analytics":
+      return SiGoogleanalytics;
     case "TagCommander":
     case "Commander's Act":
       return FaTags;

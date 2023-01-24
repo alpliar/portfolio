@@ -30,6 +30,18 @@ const colors = {
     _dark: "whiteAlpha.50",
     _light: "blackAlpha.50",
   },
+  pale: {
+    _dark: "gray.700",
+    _light: "purple.50",
+  },
+  highlight: {
+    _dark: "cyan.900",
+    _light: "purple.100",
+  },
+  surface: {
+    _dark: "gray.800",
+    _light: "white",
+  },
 };
 
 export default colors;

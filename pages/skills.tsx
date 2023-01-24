@@ -1,3 +1,4 @@
+import { useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 import {
   SiNextdotjs,
@@ -17,6 +18,7 @@ const SkillsPage: React.FC<Props> = ({}) => {
       title="Skills"
       subtitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
         impedit perferendis suscipit"
+      columns={useBreakpointValue({ base: 1, sm: 2 })}
     >
       <Feature title="Typescript" icon={SiTypescript}>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores

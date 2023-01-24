@@ -14,7 +14,7 @@ import {
   Wrap,
 } from "@chakra-ui/react";
 import React from "react";
-import { FaCheck, FaCode } from "react-icons/fa";
+import { FaCheck, FaCode, FaGithub } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 
 interface FeatureWithFeatureListProps {
@@ -140,7 +140,7 @@ const FeatureWithFeatureList: React.FC<FeatureWithFeatureListProps> = ({
             >
               {title}
             </chakra.h2>
-            <Box textAlign="center">
+            {/* <Box textAlign="center">
               <Icon
                 // position="absolute"
                 // top={0}
@@ -159,7 +159,7 @@ const FeatureWithFeatureList: React.FC<FeatureWithFeatureListProps> = ({
                 mr={{ sm: 2 }}
                 transition="all 1s"
               />
-            </Box>
+            </Box> */}
 
             <chakra.p
               fontSize={{
@@ -200,6 +200,17 @@ const FeatureWithFeatureList: React.FC<FeatureWithFeatureListProps> = ({
                 _hover={{
                   textDecoration: "underline",
                 }}
+                leftIcon={
+                  <Icon
+                    as={icon}
+                    // p={2}
+                    boxSize={10}
+                    // position="absolute"
+                    // left={1}
+                    // top={"calc(50% - var(--chakra-sizes-12) / 2)"}
+                    // transform={"scale(150%) rotate(-15deg)"}
+                  />
+                }
               >
                 Visit
               </Button>
@@ -219,6 +230,17 @@ const FeatureWithFeatureList: React.FC<FeatureWithFeatureListProps> = ({
                 _hover={{
                   textDecoration: "underline",
                 }}
+                leftIcon={
+                  <Icon
+                    as={FaGithub}
+                    // p={2}
+                    boxSize={5}
+                    // position="absolute"
+                    // left={1}
+                    // top={"calc(50% - var(--chakra-sizes-12) / 2)"}
+                    // transform={"scale(150%) rotate(-15deg)"}
+                  />
+                }
               >
                 Source
               </Button>

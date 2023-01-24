@@ -52,6 +52,11 @@ const timelineData: Timeline = [
     date: "Today",
     position: "Looking for opportunities",
     company: "Pole emploi",
+    technologies: [
+      { label: "React" },
+      { label: "Node" },
+      { label: "Typescript" },
+    ],
     description:
       "Direct-relation, part-time or full time. Industry : social, culture, education, environment, solidarity, open-source. Technical stack : React, Next.js, Node.js, TypeScript",
   },
@@ -100,7 +105,7 @@ const timelineData: Timeline = [
     logo: FaLightbulb,
     color: hrTeamColors,
     date: "2020",
-    position: "Formation React, Svelte, Vue, ...",
+    position: "Catched-up with latest techs",
     company: "wfh",
     description: "",
     technologies: [

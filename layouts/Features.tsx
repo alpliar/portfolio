@@ -5,36 +5,41 @@ interface FeaturesGridProps {
   children: ReactNode;
 }
 
-const FeaturesGrid: React.FC<FeaturesGridProps> = ({ children }) => (
-  <Stack
-    spacing={{
-      base: 10,
-      md: 0,
-    }}
-    display={{
-      md: "grid",
-    }}
-    gridTemplateColumns={{
-      md: "repeat(2,1fr)",
-    }}
-    gridColumnGap={{
-      md: 8,
-    }}
-    gridRowGap={{
-      md: 10,
-    }}
-    transition="all 1s"
-  >
-    {children}
-  </Stack>
-);
-
 interface FeaturesProps {
   children: ReactNode;
   title: string;
   subtitle: string;
+  columns?: number;
 }
-const Features: React.FC<FeaturesProps> = ({ children, title, subtitle }) => {
+const Features: React.FC<FeaturesProps> = ({
+  children,
+  title,
+  subtitle,
+  columns,
+}) => {
+  const FeaturesGrid: React.FC<FeaturesGridProps> = ({ children }) => (
+    <Stack
+      spacing={{
+        base: 10,
+        md: 0,
+      }}
+      display={{
+        md: "grid",
+      }}
+      gridTemplateColumns={{
+        md: `repeat(${columns},1fr)`,
+      }}
+      gridColumnGap={{
+        md: 8,
+      }}
+      gridRowGap={{
+        md: 10,
+      }}
+      transition="all 1s"
+    >
+      {children}
+    </Stack>
+  );
   return (
     <Flex justifyContent="center" alignItems="center">
       <Box py={12} bgColor="chakra-card-bg" rounded="xl">

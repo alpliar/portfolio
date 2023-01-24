@@ -12,38 +12,43 @@ import { GiPeas, GiWatermelon } from "react-icons/gi";
 import Feature from "../components/Feature";
 import Features from "../layouts/Features";
 import Link from "../components/Link";
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
+import SingleFeature from "../layouts/SingleFeature";
+import FeatureWithFeatureList from "../components/FeatureWithFeatureList";
 
 type Props = {};
 const ProjectsPage: React.FC<Props> = ({}) => {
   return (
-    <Features
-      title="Projects"
-      subtitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+    <>
+      <Features
+        columns={1}
+        title="Projects"
+        subtitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
         impedit perferendis suscipit"
-    >
-      <Feature title="Karpouzi" icon={GiWatermelon}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-        impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-        ratione.
-      </Feature>
-
-      <Feature title="Bored bot" icon={SiChatbot}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-        impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-        ratione.
-      </Feature>
-
-      <Feature title="cassegrain.com" icon={GiPeas}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-        impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-        ratione.
-        {` `}
-        <Link isExternal href="https://cassegrain.com/">
-          Go to cassegrain.com
-        </Link>
-      </Feature>
-    </Features>
+      >
+        <FeatureWithFeatureList
+          title="Cassegrain"
+          description="Loremp ipsumfoazifo izajfoiza "
+          features={[
+            "NodeJS",
+            "Nuxt",
+            "SSG",
+            "Vue",
+            "Vuetify",
+            "Axios",
+            "TypeScript",
+            "Cypress",
+          ]}
+          icon={GiPeas}
+        />
+        <FeatureWithFeatureList
+          title="Karpouzi"
+          description="Grocery ecommerce webite "
+          features={["React", "Next.js", "TypeScript", "Chakra UI", "Cypress"]}
+          icon={GiWatermelon}
+        />
+      </Features>
+    </>
   );
 };
 

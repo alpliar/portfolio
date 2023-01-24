@@ -88,6 +88,11 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
     transform: {
       lg: "rotate(-1deg)",
     },
+    // _hover: {
+    //   transform: {
+    //     lg: "rotate(0deg)",
+    //   },
+    // },
     // paddingRight: { base: 6 },
     transition: "all 1s",
     width: {
@@ -99,6 +104,7 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
 
   const cardStyle: BoxProps = {
     // backgroundColor: isEven ? "chakra-card-bg" : "chakra-card-secondary-bg",
+    backgroundColor: "surface",
     padding: {
       base: 4,
       sm: 6,

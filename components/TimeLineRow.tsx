@@ -86,7 +86,7 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
     },
     position: "relative",
     transform: {
-      lg: "rotate(-1deg)",
+      lg: `rotate(${isEven ? 1 : -1}deg)`,
     },
     // _hover: {
     //   transform: {

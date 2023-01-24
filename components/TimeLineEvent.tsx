@@ -137,7 +137,7 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
   };
 
   const contentStyle: StackProps = {
-    transform: { lg: "rotate(1deg)" },
+    transform: { lg: `rotate(${isEven ? -1 : 1}deg)` },
   };
 
   return (

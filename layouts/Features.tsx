@@ -46,7 +46,7 @@ const Features: React.FC<FeaturesProps> = ({
       gridRowGap={{
         md: 10,
       }}
-      transition="all 1s"
+      transition="all ease-in-out 0.2s"
     >
       {children}
     </Stack>
@@ -59,7 +59,7 @@ const Features: React.FC<FeaturesProps> = ({
     },
     // marginTop: 8,
     spacing: 8,
-    transition: "all 1s",
+    transition: "all ease-in-out 0.2s",
   };
   return (
     <Box
@@ -81,7 +81,7 @@ const Features: React.FC<FeaturesProps> = ({
           md: 16,
           lg: 32,
         }}
-        transition="all 1s"
+        transition="all ease-in-out 0.2s"
       >
         <Stack {...childrenContainerStyle}>
           <Header start={<PageHeaderLogo />} end={<PageHeaderEnd />} />

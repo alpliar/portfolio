@@ -1,4 +1,4 @@
-import { Tag, TagLabel, TagLeftIcon, Wrap } from "@chakra-ui/react";
+import { Tag, TagLabel, TagLeftIcon, Wrap, WrapItem } from "@chakra-ui/react";
 import React from "react";
 import { IconType } from "react-icons";
 import { FaTags } from "react-icons/fa";
@@ -122,15 +122,27 @@ const getIcon = (label: string): IconType => {
   }
 };
 
+interface TechnologyProps {
+  label: Technology["label"];
+}
+
+const Technology: React.FC<TechnologyProps> = ({ label }) => {
+  return (
+    <Tag size={{ base: "md", md: "lg" }}>
+      <TagLeftIcon color="currentColor" boxSize={6} as={getIcon(label)} />
+      <TagLabel>{label}</TagLabel>
+    </Tag>
+  );
+};
+
 const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
   return (
-    <Wrap>
+    <Wrap justify={{ base: "left", md: "center", lg: "left" }}>
       {/* <Text>Learned</Text> */}
       {technologies.map((tech, index) => (
-        <Tag key={index} size={{ base: "md", md: "lg" }}>
-          <TagLeftIcon color="currentColor" boxSize={6} as={getIcon(tech)} />
-          <TagLabel>{tech}</TagLabel>
-        </Tag>
+        <WrapItem key={index}>
+          <Technology label={tech} />
+        </WrapItem>
       ))}
     </Wrap>
   );

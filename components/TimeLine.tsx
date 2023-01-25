@@ -8,9 +8,13 @@ type Props = {};
 const TimeLine: React.FC<Props> = ({}) => {
   const listStyle: ListProps = {
     _after: {
-      md: {
+      lg: {
         left: "50%",
-        transition: "all 1s",
+      },
+      md: {
+        // left: "var(--chakra-sizes-32)",
+        left: "50%",
+        transition: "all ease-in-out 0.2s",
       },
       sm: {
         background: "secondary",
@@ -20,7 +24,7 @@ const TimeLine: React.FC<Props> = ({}) => {
         marginLeft: -1,
         position: "absolute",
         top: 0,
-        transition: "all 1s",
+        transition: "all ease-in-out 0.2s",
         width: 2,
       },
     },
@@ -28,9 +32,10 @@ const TimeLine: React.FC<Props> = ({}) => {
     maxWidth: "container.lg",
     paddingX: 4,
     paddingY: 0,
+    paddingTop: { md: 20 },
     position: "relative",
-    spacing: 4,
-    transition: "all 1s",
+    spacing: { base: 4, md: 20, lg: 4 },
+    transition: "all ease-in-out 0.2s",
     width: "full",
   };
 

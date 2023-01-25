@@ -33,15 +33,21 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
         height: 4,
         left: {
           base: 2,
-          md: isEven ? -2 : "auto",
+          // md: `calc(var(--chakra-sizes-24) + var(--chakra-sizes-2))`,
+          md: "calc(50% - var(--chakra-sizes-2))",
+          lg: isEven ? -2 : "auto",
         },
         position: "absolute",
         right: {
           base: "-8px",
-          md: !isEven ? -2 : "auto",
+          lg: !isEven ? -2 : "auto",
         },
-        top: "calc(50% - 8px)",
-        transition: "all 1s",
+        top: {
+          base: "calc(50% - 8px)",
+          md: "var(--chakra-sizes-1)",
+          lg: "calc(50% - 8px)",
+        },
+        transition: "all ease-in-out 0.2s",
         width: 4,
         zIndex: 1,
       },
@@ -50,29 +56,35 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
       sm: {
         background: "primary",
         content: '""',
-        height: 0.5,
+        display: { md: "none", lg: "inherit" },
+        height: { base: 0.5, md: 10, lg: 0.5 },
         left: {
           base: 4,
-          md: isEven ? 2 : "auto",
+          md: `calc(50% - var(--chakra-sizes-0-5))`,
+          lg: isEven ? 2 : "auto",
         },
         position: "absolute",
         right: {
           base: 2,
-          md: !isEven ? 2 : "auto",
+          lg: !isEven ? 2 : "auto",
         },
-        top: `calc(50% - var(--chakra-sizes-0-5))`,
-        transition: "all 1s",
+        top: {
+          base: `calc(50% - var(--chakra-sizes-0-5))`,
+          md: 0,
+          lg: `calc(50% - var(--chakra-sizes-0-5))`,
+        },
+        transition: "all ease-in-out 0.2s",
         width: {
           base: 12,
           lg: 14,
-          md: 10,
+          md: 1,
         },
         zIndex: 1,
       },
     },
     left: {
       base: 0,
-      md: !isEven ? 0 : "50%",
+      lg: !isEven ? 0 : "50%",
     },
     paddingLeft: {
       sm: 12,
@@ -87,16 +99,15 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
     transform: {
       lg: `rotate(${isEven ? 1 : -1}deg)`,
     },
-    transition: "all 1s",
+    transition: "all ease-in-out 0.2s",
     width: {
       base: "full",
-      md: "50%",
+      lg: "50%",
     },
     zIndex: 1,
   };
 
   const cardStyle: BoxProps = {
-    // backgroundColor: isEven ? "chakra-card-bg" : "chakra-card-secondary-bg",
     backgroundColor: "surface",
     padding: {
       base: 4,
@@ -105,16 +116,16 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
     },
     paddingLeft: {
       lg: isEven ? 32 : 12,
-      md: isEven ? 24 : 6,
+      md: 6,
       sm: 16,
     },
     paddingRight: {
-      md: !isEven ? 24 : undefined,
       lg: !isEven ? 28 : undefined,
     },
     position: "initial",
-    transition: "all 1s",
+    transition: "all ease-in-out 0.2s",
     width: "full",
+    textAlign: { md: "center", lg: "inherit" },
   };
 
   const cardBodyStyle: CardBodyProps = {

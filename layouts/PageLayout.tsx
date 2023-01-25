@@ -12,7 +12,7 @@ const PageLayout: React.FC<Props> = ({ children }) => {
     },
     marginTop: 8,
     spacing: 8,
-    transition: "all 1s",
+    transition: "all ease-in-out 0.2s",
   };
   return (
     <Box as="main" marginBottom={16}>

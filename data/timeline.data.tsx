@@ -245,6 +245,7 @@ const timelineData: Timeline = [
     position: "Debut",
     company: "Amstrad CPC 6128+",
     description: "...",
+    technologies: [{ label: "Basic" }],
   },
 ];
 

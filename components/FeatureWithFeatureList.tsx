@@ -54,7 +54,7 @@ const FeatureWithFeatureList: React.FC<FeatureWithFeatureListProps> = ({
 
         <Text
           fontSize={{ base: "sm", sm: "lg" }}
-          transition="all 1s"
+          transition="all ease-in-out 0.2s"
           {...props}
         />
       </Flex>
@@ -76,7 +76,7 @@ const FeatureWithFeatureList: React.FC<FeatureWithFeatureListProps> = ({
     mx: "auto",
     rounded: "lg",
     shadow: "xl",
-    transition: "all 1s",
+    transition: "all ease-in-out 0.2s",
     width: "full",
     overflow: "hidden",
   };
@@ -102,7 +102,7 @@ const FeatureWithFeatureList: React.FC<FeatureWithFeatureListProps> = ({
               flexDirection={{ base: "column", sm: "row" }}
               alignItems="center"
               justifyContent="center"
-              transition="all 1s"
+              transition="all ease-in-out 0.2s"
             >
               {title}
             </chakra.h2>

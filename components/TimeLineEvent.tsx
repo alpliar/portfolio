@@ -1,22 +1,15 @@
 import {
   Box,
-  Card,
-  CardBody,
   Flex,
   Heading,
   HeadingProps,
-  HStack,
   Icon,
   IconProps,
   Stack,
   StackProps,
-  Tag,
-  TagLabel,
-  TagLeftIcon,
   Text,
   TextProps,
   useBreakpointValue,
-  Wrap,
 } from "@chakra-ui/react";
 import React from "react";
 import { TimelineData } from "../models/TimelineData.model";
@@ -46,12 +39,18 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
     fontFamily: "monospace",
     fontSize: {
       base: "sm",
+      md: "md",
       lg: "xl",
     },
     fontWeight: "bold",
     left: {
-      lg: isEven ? -lgDateOffset : undefined,
-      md: isEven ? -mdDateOffset : undefined,
+      // md: "var(--chakra-sizes-32)",
+      md: "50%",
+      lg: isEven ? "-100%" : `100%`,
+      // md: isEven ? -mdDateOffset : undefined,
+    },
+    paddingX: {
+      md: 6,
     },
     // letterSpacing: 0,
     lineHeight: {
@@ -63,19 +62,26 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
     },
     right: {
       lg: !isEven ? -lgDateOffset : undefined,
-      md: !isEven ? -mdDateOffset : undefined,
+      // md: !isEven ? -mdDateOffset : undefined,
     },
     textAlign: {
-      md: isEven ? "end" : "start",
+      // md: "center",
+      md: "left",
+      lg: isEven ? "end" : "start",
     },
     textTransform: "lowercase",
     top: {
-      md: `calc(50% - var(--chakra-sizes-${mdDateHeight / 2}))`,
+      md: -1,
+      lg: `calc(50% - var(--chakra-sizes-${mdDateHeight / 2}))`,
     },
-    transition: "all 1s",
+    transform: {
+      md: "rotate(-5deg) translateY(calc(-1 * var(--chakra-sizes-6)))",
+      lg: "inherit",
+    },
+    transition: "all ease-in-out 0.2s",
     width: {
-      lg: lgDateWidth,
-      md: mdDateWidth,
+      md: "50%",
+      lg: "100%",
     },
     zIndex: {
       md: 1,
@@ -106,9 +112,13 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
     padding: 1.5,
     position: {
       sm: "absolute",
+      md: "inherit",
+      lg: "absolute",
     },
-    top: `calc(50% - var(--chakra-sizes-${iconSize / 2}))`,
-    transition: "all 1s",
+    top: {
+      sm: `calc(50% - var(--chakra-sizes-${iconSize / 2}))`,
+    },
+    transition: "all ease-in-out 0.2s",
     width: iconSize,
     zIndex: 1,
   };
@@ -117,9 +127,11 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
       left: 16,
     },
     md: {
-      textAlign: isEven ? "start" : "end",
-      right: 12,
-      left: isEven ? 12 : undefined,
+      // textAlign: isEven ? "start" : "end",
+      // right: 12,
+      // left: isEven ? 12 : undefined,
+      left: "calc(50% - var(--chakra-sizes-6))",
+      top: 10,
     },
     lg: {
       textAlign: isEven ? "start" : "end",
@@ -138,6 +150,7 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
 
   const contentStyle: StackProps = {
     transform: { lg: `rotate(${isEven ? -1 : 1}deg)` },
+    alignItems: { md: "center", lg: "start" },
   };
 
   return (
@@ -147,9 +160,20 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
       <Stack {...contentStyle}>
         <Heading {...positionStyle}>{position}</Heading>
         <Text>{company}</Text>
-        <Text>{description}</Text>
+        {description && (
+          <Text
+            paddingY={{ base: 3, md: 6 }}
+            maxW={{ md: 96, lg: "inherit" }}
+            marginX="auto"
+            textAlign="start"
+          >
+            {description}
+          </Text>
+        )}
         {technologies && (
-          <Technologies technologies={technologies.map((t) => t.label)} />
+          <Flex maxW={{ md: 96, lg: "inherit" }} marginX="auto">
+            <Technologies technologies={technologies.map((t) => t.label)} />
+          </Flex>
         )}
       </Stack>
     </>

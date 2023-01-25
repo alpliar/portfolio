@@ -25,7 +25,7 @@ const Header: React.FC<Props> = ({ start, end }) => {
   };
 
   return (
-    <Flex {...containerStyle}>
+    <Flex {...containerStyle} wrap="wrap">
       <Box {...startStyle}>{start}</Box>
       <Wrap {...endStyle}>{end}</Wrap>
     </Flex>

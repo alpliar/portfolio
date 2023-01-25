@@ -25,7 +25,6 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
   const rowStyle: FlexProps = {
     _after: {
       sm: {
-        // background: "chakra-body-bg",
         backgroundColor: "primary",
         borderColor: "primary",
         borderRadius: "16px",
@@ -88,12 +87,6 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
     transform: {
       lg: `rotate(${isEven ? 1 : -1}deg)`,
     },
-    // _hover: {
-    //   transform: {
-    //     lg: "rotate(0deg)",
-    //   },
-    // },
-    // paddingRight: { base: 6 },
     transition: "all 1s",
     width: {
       base: "full",

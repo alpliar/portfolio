@@ -1,27 +1,15 @@
+import { useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
-import {
-  SiChatbot,
-  SiNextdotjs,
-  SiNuxtdotjs,
-  SiReact,
-  SiRedux,
-  SiSvelte,
-  SiTypescript,
-} from "react-icons/si";
-import { GiOpenedFoodCan, GiPeas, GiWatermelon } from "react-icons/gi";
-import Feature from "../components/Feature";
-import Features from "../layouts/Features";
-import Link from "../components/Link";
-import { Box, Text, useBreakpointValue } from "@chakra-ui/react";
-import SingleFeature from "../layouts/SingleFeature";
+import { GiOpenedFoodCan, GiWatermelon } from "react-icons/gi";
 import FeatureWithFeatureList from "../components/FeatureWithFeatureList";
+import Features from "../layouts/Features";
 
 type Props = {};
 const ProjectsPage: React.FC<Props> = ({}) => {
   return (
     <>
       <Features
-        columns={useBreakpointValue({ base: 1, sm: 2 })}
+        columns={useBreakpointValue({ base: 1, md: 2 })}
         title="Projects"
         subtitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
         impedit perferendis suscipit"

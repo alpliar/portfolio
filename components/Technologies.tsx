@@ -127,7 +127,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
     <Wrap>
       {/* <Text>Learned</Text> */}
       {technologies.map((tech, index) => (
-        <Tag key={index} size="lg">
+        <Tag key={index} size={{ base: "md", md: "lg" }}>
           <TagLeftIcon color="currentColor" boxSize={6} as={getIcon(tech)} />
           <TagLabel>{tech}</TagLabel>
         </Tag>

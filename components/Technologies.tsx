@@ -1,8 +1,10 @@
 import { Tag, TagLabel, TagLeftIcon, Wrap, WrapItem } from "@chakra-ui/react";
 import React from "react";
 import { IconType } from "react-icons";
-import { FaTags } from "react-icons/fa";
+import { FaLanguage, FaTags } from "react-icons/fa";
+import { GiGlobe } from "react-icons/gi";
 import {
+  SiAuth0,
   SiChakraui,
   SiConfluence,
   SiCplusplus,
@@ -10,6 +12,7 @@ import {
   SiCypress,
   SiDotnet,
   SiEslint,
+  SiFramer,
   SiGoogleanalytics,
   SiGoogletagmanager,
   SiGraphql,
@@ -29,6 +32,7 @@ import {
   SiReact,
   SiRuby,
   SiRubyonrails,
+  SiSuperuser,
   SiSvelte,
   SiTypescript,
   SiVisualstudiocode,
@@ -53,6 +57,8 @@ const getIcon = (label: string): IconType => {
     case "Nuxt":
     case "Nuxt.js":
       return SiNuxtdotjs;
+    case "Framer motion":
+      return SiFramer;
     case "NPM":
       return SiNpm;
     case "C++":
@@ -65,6 +71,13 @@ const getIcon = (label: string): IconType => {
       return SiPrettier;
     case "ESLint":
       return SiEslint;
+    case "i18next":
+      return FaLanguage;
+    case "Hygraph":
+    case "GraphCMS":
+      return SiGraphql;
+    case "OAuth":
+      return SiSuperuser;
     case "Next":
     case "Next.js":
     case "NextJS":

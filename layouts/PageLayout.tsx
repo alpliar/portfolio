@@ -11,6 +11,7 @@ import {
   Text,
   TextProps,
 } from "@chakra-ui/react";
+import Head from "next/head";
 import React, { ReactNode } from "react";
 import PageHeaderEnd from "../components/PageHeaderEnd";
 import PageHeaderLogo from "../components/PageHeaderLogo";
@@ -19,12 +20,14 @@ import Header from "./Header";
 interface PageLayoutProps {
   children: ReactNode;
   subtitle: string;
+  tabName?: string;
   title: string;
 }
 
 const PageLayout: React.FC<PageLayoutProps> = ({
   children,
   subtitle,
+  tabName = "",
   title,
 }) => {
   const pageStyle: BoxProps = {
@@ -70,19 +73,28 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   };
 
   return (
-    <Box as="main" {...pageStyle}>
-      <Stack {...paperStyle}>
-        <Header start={<PageHeaderLogo />} end={<PageHeaderEnd />} />
-        <Center>
-          <Divider maxW={64} />
-        </Center>
-        <Flex direction="column" align={{ base: "left", md: "center" }}>
-          <Heading {...titleStyle}>{title}</Heading>
-          <Text {...subtitleStyle}>{subtitle}</Text>
-        </Flex>
-        {children}
-      </Stack>
-    </Box>
+    <>
+      <Head>
+        <title>{`AP | ${tabName || title}`}</title>
+        <meta name="description" content="Alexandre's portfolio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Box as="main" {...pageStyle}>
+        <Stack {...paperStyle}>
+          <Header start={<PageHeaderLogo />} end={<PageHeaderEnd />} />
+          <Center>
+            <Divider maxW={64} />
+          </Center>
+          <Flex direction="column" align={{ base: "left", md: "center" }}>
+            <Heading {...titleStyle}>{title}</Heading>
+            <Text {...subtitleStyle}>{subtitle}</Text>
+          </Flex>
+          {children}
+        </Stack>
+      </Box>
+    </>
   );
 };
 

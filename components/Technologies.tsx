@@ -150,8 +150,7 @@ const Technology: React.FC<TechnologyProps> = ({ label }) => {
 
 const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
   return (
-    <Wrap justify={{ base: "left", md: "center", lg: "left" }}>
-      {/* <Text>Learned</Text> */}
+    <Wrap>
       {technologies.map((tech, index) => (
         <WrapItem key={index}>
           <Technology label={tech} />

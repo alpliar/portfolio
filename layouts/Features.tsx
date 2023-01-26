@@ -79,7 +79,7 @@ const Features: React.FC<FeaturesProps> = ({
           base: 4,
           sm: 8,
           md: 16,
-          lg: 32,
+          xl: 24,
         }}
         transition="all ease-in-out 0.2s"
       >

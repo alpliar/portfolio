@@ -31,10 +31,6 @@ const HeaderLinks = ({}) => {
       <HeaderLink href="/skills">Skills</HeaderLink>
       <HeaderLink href="/projects">Projects</HeaderLink>
       <HeaderLink href="/experience">Experience</HeaderLink>
-      <Flex as={Link} href="https://www.linkedin.com/in/alexandrepl/">
-        <Icon as={FaLinkedin} />
-        <VisuallyHidden>LinkedIn</VisuallyHidden>
-      </Flex>
     </Wrap>
   );
 };

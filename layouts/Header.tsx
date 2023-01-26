@@ -3,6 +3,7 @@ import {
   BoxProps,
   Flex,
   FlexProps,
+  Spacer,
   Wrap,
   WrapProps,
 } from "@chakra-ui/react";
@@ -12,22 +13,16 @@ type Props = { start?: ReactNode; end?: ReactNode };
 
 const Header: React.FC<Props> = ({ start, end }) => {
   const containerStyle: FlexProps = {
-    justify: "space-between",
     align: "center",
     padding: 4,
-  };
-  const startStyle: BoxProps = {
-    color: "primary",
-  };
-  const endStyle: WrapProps = {
-    align: "center",
-    // color: "secondary",
+    gap: 5,
   };
 
   return (
     <Flex {...containerStyle} wrap="wrap">
-      <Box {...startStyle}>{start}</Box>
-      <Wrap {...endStyle}>{end}</Wrap>
+      {start}
+      <Spacer />
+      {end}
     </Flex>
   );
 };

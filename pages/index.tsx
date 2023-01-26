@@ -10,7 +10,9 @@ export default function Home() {
       <PageLayout
         tabName="Home"
         title="Alexandre"
-        subtitle="Senior software engineer"
+        subtitle="I am a developer based in Lyon, France. 
+          I have many years of experience in consulting in all areas of digital (dev, testing, design). 
+          I love minimal but accessible design. I love nature, games and music."
       >
         <SimpleGrid columns={{ base: 1, md: 3 }} gap={10}>
           <Feature title="React.js" icon={SiReact}>

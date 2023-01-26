@@ -16,7 +16,6 @@ const PageLayout: React.FC<Props> = ({ children }) => {
   };
   return (
     <Box as="main" marginBottom={16}>
-      {/* <Header start={<PageHeaderLogo />} end={<PageHeaderEnd />} /> */}
       <Stack {...childrenContainerStyle}>{children}</Stack>
     </Box>
   );

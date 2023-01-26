@@ -37,7 +37,7 @@ import {
 } from "react-icons/si";
 import { Technology } from "../models/TimelineData.model";
 
-interface TechnologiesProps {
+export interface TechnologiesProps {
   technologies: Technology["label"][];
 }
 

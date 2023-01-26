@@ -1,5 +1,6 @@
 import {
   Box,
+  BoxProps,
   Flex,
   FlexProps,
   Heading,
@@ -20,7 +21,7 @@ interface FeatureProps {
 
 const Feature: React.FC<FeatureProps> = ({ children, icon, title }) => {
   const iconSize: ResponsiveValue<number> = { base: 8, md: 10 };
-  const textStyle = {
+  const textStyle: BoxProps = {
     mt: 2,
     color: "gray.500",
     _dark: {
@@ -62,7 +63,7 @@ const Feature: React.FC<FeatureProps> = ({ children, icon, title }) => {
         <Heading as="h2" {...titleStyle}>
           {title}
         </Heading>
-        <Text {...textStyle}>{children}</Text>
+        <Box {...textStyle}>{children}</Box>
       </Box>
     </Flex>
   );

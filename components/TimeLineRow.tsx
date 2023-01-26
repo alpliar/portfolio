@@ -32,7 +32,7 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
         content: '""',
         height: 4,
         left: {
-          base: 2,
+          base: 0,
           // md: `calc(var(--chakra-sizes-24) + var(--chakra-sizes-2))`,
           md: "calc(50% - var(--chakra-sizes-2))",
           lg: isEven ? -2 : "auto",
@@ -59,13 +59,13 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
         display: { md: "none", lg: "inherit" },
         height: { base: 0.5, md: 10, lg: 0.5 },
         left: {
-          base: 4,
+          sm: 4,
           md: `calc(50% - var(--chakra-sizes-0-5))`,
           lg: isEven ? 2 : "auto",
         },
         position: "absolute",
         right: {
-          base: 2,
+          sm: 2,
           lg: !isEven ? 2 : "auto",
         },
         top: {
@@ -75,7 +75,7 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
         },
         transition: "all ease-in-out 0.2s",
         width: {
-          base: 12,
+          sm: 6,
           lg: 14,
           md: 1,
         },
@@ -87,7 +87,7 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
       lg: !isEven ? 0 : "50%",
     },
     paddingLeft: {
-      sm: 12,
+      sm: 6,
     },
     paddingX: {
       md: 6,

@@ -124,7 +124,7 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
   };
   const iconResponsiveProps: IconProps = useBreakpointValue({
     sm: {
-      left: 16,
+      left: 10,
     },
     md: {
       // textAlign: isEven ? "start" : "end",

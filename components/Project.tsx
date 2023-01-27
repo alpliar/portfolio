@@ -1,24 +1,28 @@
 import { Box, Stack, Text } from "@chakra-ui/react";
-import React, { ReactNode } from "react";
-import { IconType } from "react-icons";
+import React from "react";
 import { Project } from "../models/project.model";
 import Feature from "./Feature";
-import Link from "./Link";
 import ProjectActions from "./ProjectActions";
-import Technologies, { TechnologiesProps } from "./Technologies";
+import Technologies from "./Technologies";
 interface ProjectProps {
   project: Project;
 }
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
-  const { title, icon, description, technologies, url, sourceUrl } = project;
+  const { title, icon, description, technologies } = project;
   return (
     <Feature title={title} icon={icon}>
       <Stack spacing={4}>
-        <Text h={12}>{description}</Text>
-        <Box h={{ md: 28 }} overflowY="auto">
-          <Technologies technologies={technologies} />
-        </Box>
+        <Stack spacing={4} h={{ lg: 48, xl: 64 }} overflow="auto">
+          <Text>{description}</Text>
+          <Box maxW={"lg"}>
+            <Technologies
+              justify="start"
+              size={{ base: "md", xl: "lg" }}
+              technologies={technologies}
+            />
+          </Box>
+        </Stack>
         <ProjectActions project={project} />
       </Stack>
     </Feature>

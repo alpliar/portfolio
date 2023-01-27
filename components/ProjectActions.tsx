@@ -27,7 +27,7 @@ const ProjectActions: React.FC<ProjectActionsProps> = ({ project }) => {
           _hover={{
             textDecoration: "underline",
           }}
-          leftIcon={<Icon as={FaGithub} boxSize={5} />}
+          leftIcon={<Icon as={FaGithub} />}
         >
           Source
         </Button>
@@ -47,7 +47,7 @@ const ProjectActions: React.FC<ProjectActionsProps> = ({ project }) => {
           _hover={{
             textDecoration: "underline",
           }}
-          leftIcon={<Icon as={icon} boxSize={10} />}
+          leftIcon={<Icon as={icon} />}
         >
           Visit
         </Button>

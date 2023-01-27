@@ -1,14 +1,11 @@
 import {
   Box,
-  Flex,
   Heading,
   HeadingProps,
   Icon,
   IconProps,
   SimpleGrid,
   SimpleGridProps,
-  Stack,
-  StackProps,
   Text,
   TextProps,
   useBreakpointValue,
@@ -172,26 +169,12 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
           )}
         </Box>
         {technologies && (
-          <Stack
-            // align="flex-end"
-            maxW={{ md: 96, lg: "inherit" }}
-            marginX="auto"
-            w="full"
-          >
-            <Heading
-              color="primary"
-              fontSize="md"
-              as="span"
-              textAlign={{ base: "start", md: "end", lg: "start" }}
-            >
-              Technologies
-            </Heading>
-            <Technologies
-              justify={{ base: "start", md: "end", lg: "start" }}
-              technologies={technologies.map((t) => t.label)}
-              size={{ base: "md", lg: "lg" }}
-            />
-          </Stack>
+          <Technologies
+            textAlign={{ base: "start", md: "end", lg: "start" }}
+            justify={{ base: "start", md: "end", lg: "start" }}
+            technologies={technologies.map((t) => t.label)}
+            size={{ base: "md", lg: "lg" }}
+          />
         )}
       </SimpleGrid>
     </>

@@ -20,7 +20,7 @@ const SkillsPage: React.FC<Props> = ({}) => {
       subtitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
         impedit perferendis suscipit"
     >
-      <SimpleGrid columns={{ base: 1, md: 2 }}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} gap={8}>
         <Feature title="Typescript" icon={SiTypescript}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
           impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis

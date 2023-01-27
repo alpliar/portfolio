@@ -1,5 +1,6 @@
 import {
-  chakra,
+  Heading,
+  Stack,
   Tag,
   TagLabel,
   TagLeftIcon,
@@ -51,8 +52,9 @@ import { Technology } from "../models/TimelineData.model";
 
 export interface TechnologiesProps {
   technologies: Technology["label"][];
-  size: TagProps["size"];
+  size?: TagProps["size"];
   justify?: WrapProps["justify"];
+  textAlign?: WrapProps["textAlign"];
 }
 
 const getIcon = (label: string): IconType => {
@@ -163,17 +165,23 @@ const Technology: React.FC<TechnologyProps> = ({ label, size }) => {
 
 const Technologies: React.FC<TechnologiesProps> = ({
   technologies,
-  size,
+  size = "md",
   justify = "start",
+  textAlign = "start",
 }) => {
   return (
-    <Wrap justify={justify}>
-      {technologies.map((tech, index) => (
-        <WrapItem key={index}>
-          <Technology label={tech} size={size} />
-        </WrapItem>
-      ))}
-    </Wrap>
+    <Stack textAlign={textAlign} justify={justify} w="full">
+      <Heading color="primary" fontSize="md" as="span">
+        Technologies
+      </Heading>
+      <Wrap justify={justify}>
+        {technologies.map((tech, index) => (
+          <WrapItem key={index}>
+            <Technology label={tech} size={size} />
+          </WrapItem>
+        ))}
+      </Wrap>
+    </Stack>
   );
 };
 

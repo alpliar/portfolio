@@ -19,7 +19,7 @@ const ProjectsPage: React.FC<Props> = ({}) => {
         subtitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
         impedit perferendis suscipit"
       >
-        <SimpleGrid columns={{ base: 1, md: 2 }} gap={8}>
+        <SimpleGrid columns={{ base: 1, lg: 2 }} gap={8}>
           {projectsData.map((project, index) => (
             <Project key={index} project={project} />
           ))}

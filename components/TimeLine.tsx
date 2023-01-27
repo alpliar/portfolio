@@ -61,7 +61,7 @@ const TimeLineRow: React.FC<TimeLineRowProps> = ({ event, isEven }) => {
     width: "full",
     _after: {
       md: {
-        background: "pale",
+        background: "secondary",
         bottom: "0px",
         content: '""',
         left: "50%",

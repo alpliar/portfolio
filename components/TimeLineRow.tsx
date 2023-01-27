@@ -1,5 +1,4 @@
 import {
-  Box,
   BoxProps,
   Card,
   CardBody,
@@ -7,7 +6,6 @@ import {
   Flex,
   FlexProps,
   ListItem,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { TimelineData } from "../models/TimelineData.model";
@@ -24,6 +22,7 @@ interface Props {
 const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
   const rowStyle: FlexProps = {
     _after: {
+      // round mark on time line
       sm: {
         backgroundColor: "primary",
         borderColor: "primary",
@@ -33,19 +32,18 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
         height: 4,
         left: {
           base: 0,
-          // md: `calc(var(--chakra-sizes-24) + var(--chakra-sizes-2))`,
-          md: "calc(50% - var(--chakra-sizes-2))",
-          lg: isEven ? -2 : "auto",
+          md: "calc(50% - var(--chakra-sizes-1))",
+          lg: isEven ? -1 : "auto",
         },
         position: "absolute",
         right: {
           base: "-8px",
-          lg: !isEven ? -2 : "auto",
+          lg: !isEven ? -3 : "auto",
         },
         top: {
-          base: "calc(50% - 8px)",
+          base: "calc(50% - var(--chakra-sizes-2))",
           md: "var(--chakra-sizes-1)",
-          lg: "calc(50% - 8px)",
+          lg: "calc(50% - var(--chakra-sizes-2))",
         },
         transition: "all ease-in-out 0.2s",
         width: 4,
@@ -66,7 +64,7 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
         position: "absolute",
         right: {
           sm: 2,
-          lg: !isEven ? 2 : "auto",
+          lg: !isEven ? 1 : "auto",
         },
         top: {
           base: `calc(50% - var(--chakra-sizes-0-5))`,
@@ -112,11 +110,11 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
     padding: {
       base: 4,
       sm: 6,
-      lg: 12,
+      md: 12,
     },
     paddingLeft: {
       lg: isEven ? 32 : 12,
-      md: 6,
+      md: undefined,
       sm: 16,
     },
     paddingRight: {
@@ -125,7 +123,6 @@ const TimeLineRow: React.FC<Props> = ({ event, isEven }) => {
     position: "initial",
     transition: "all ease-in-out 0.2s",
     width: "full",
-    textAlign: { md: "center", lg: "inherit" },
   };
 
   const cardBodyStyle: CardBodyProps = {

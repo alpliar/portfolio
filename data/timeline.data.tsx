@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
 import {
+  SiAngular,
   SiConfluence,
   SiCplusplus,
   SiCss3,
@@ -73,6 +74,7 @@ const timelineData: Timeline = [
       { label: "React", icon: SiReact },
       { label: "Vuetify", icon: SiVuetify },
       { label: "Typescript", icon: SiTypescript },
+      { label: "Angular", icon: SiAngular },
     ],
     steps: [
       {

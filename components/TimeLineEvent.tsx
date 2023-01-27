@@ -5,6 +5,8 @@ import {
   HeadingProps,
   Icon,
   IconProps,
+  SimpleGrid,
+  SimpleGridProps,
   Stack,
   StackProps,
   Text,
@@ -26,9 +28,7 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
 
   const mdDateHeight = 8;
   const mdDateWidth = 28;
-  const mdDateOffset = mdDateWidth + mdDateHeight / 2;
   const lgDateHeight = 8;
-  const lgDateWidth = 40;
   const lgDateOffset = 48;
 
   const dateStyle: TextProps = {
@@ -112,8 +112,6 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
     padding: 1.5,
     position: {
       sm: "absolute",
-      md: "inherit",
-      lg: "absolute",
     },
     top: {
       sm: `calc(50% - var(--chakra-sizes-${iconSize / 2}))`,
@@ -127,10 +125,7 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
       left: 10,
     },
     md: {
-      // textAlign: isEven ? "start" : "end",
-      // right: 12,
-      // left: isEven ? 12 : undefined,
-      left: "calc(50% - var(--chakra-sizes-6))",
+      left: "calc(50% - var(--chakra-sizes-5))",
       top: 10,
     },
     lg: {
@@ -146,36 +141,59 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
       base: "md",
       sm: "xl",
     },
+    maxWidth: { md: 64, lg: "inherit" },
   };
 
-  const contentStyle: StackProps = {
+  const contentStyle: SimpleGridProps = {
     transform: { lg: `rotate(${isEven ? -1 : 1}deg)` },
-    alignItems: { md: "center", lg: "start" },
+    alignItems: { md: "start", lg: "start" },
+    maxWidth: "container.sm",
+    margin: "auto",
+    columns: { base: 1, md: 2, lg: 1 },
+    gap: { base: 5, md: iconSize * 2, lg: 5 },
   };
 
   return (
     <>
       <Text {...dateStyle}>{date}</Text>
       <Icon as={logo} {...iconStyle} {...iconResponsiveProps} />
-      <Stack {...contentStyle}>
-        <Heading {...positionStyle}>{position}</Heading>
-        <Text>{company}</Text>
-        {description && (
-          <Text
-            paddingY={{ base: 3, md: 6 }}
+      <SimpleGrid {...contentStyle}>
+        <Box>
+          <Heading {...positionStyle}>{position}</Heading>
+          <Text>{company}</Text>
+          {description && (
+            <Text
+              marginTop={{ base: 3, md: 5 }}
+              maxWidth={{ md: 96, lg: "inherit" }}
+              marginX="auto"
+            >
+              {description}
+            </Text>
+          )}
+        </Box>
+        {technologies && (
+          <Stack
+            // align="flex-end"
             maxW={{ md: 96, lg: "inherit" }}
             marginX="auto"
-            textAlign="start"
+            w="full"
           >
-            {description}
-          </Text>
+            <Heading
+              color="primary"
+              fontSize="md"
+              as="span"
+              textAlign={{ base: "start", md: "end", lg: "start" }}
+            >
+              Technologies
+            </Heading>
+            <Technologies
+              justify={{ base: "start", md: "end", lg: "start" }}
+              technologies={technologies.map((t) => t.label)}
+              size={{ base: "md", lg: "lg" }}
+            />
+          </Stack>
         )}
-        {technologies && (
-          <Flex maxW={{ md: 96, lg: "inherit" }} marginX="auto">
-            <Technologies technologies={technologies.map((t) => t.label)} />
-          </Flex>
-        )}
-      </Stack>
+      </SimpleGrid>
     </>
   );
 };

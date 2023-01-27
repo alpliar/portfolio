@@ -1,10 +1,18 @@
-import { Tag, TagLabel, TagLeftIcon, Wrap, WrapItem } from "@chakra-ui/react";
+import {
+  chakra,
+  Tag,
+  TagLabel,
+  TagLeftIcon,
+  TagProps,
+  Wrap,
+  WrapItem,
+  WrapProps,
+} from "@chakra-ui/react";
 import React from "react";
 import { IconType } from "react-icons";
 import { FaLanguage, FaTags } from "react-icons/fa";
-import { GiGlobe } from "react-icons/gi";
 import {
-  SiAuth0,
+  SiAngular,
   SiChakraui,
   SiConfluence,
   SiCplusplus,
@@ -43,6 +51,8 @@ import { Technology } from "../models/TimelineData.model";
 
 export interface TechnologiesProps {
   technologies: Technology["label"][];
+  size: TagProps["size"];
+  justify?: WrapProps["justify"];
 }
 
 const getIcon = (label: string): IconType => {
@@ -100,6 +110,8 @@ const getIcon = (label: string): IconType => {
       return SiCss3;
     case "Java":
       return SiJava;
+    case "Angular":
+      return SiAngular;
     case "Cypress":
       return SiCypress;
     case "Typescript":
@@ -137,23 +149,28 @@ const getIcon = (label: string): IconType => {
 
 interface TechnologyProps {
   label: Technology["label"];
+  size?: TagProps["size"];
 }
 
-const Technology: React.FC<TechnologyProps> = ({ label }) => {
+const Technology: React.FC<TechnologyProps> = ({ label, size }) => {
   return (
-    <Tag size={{ base: "md", md: "lg" }}>
+    <Tag size={size || { base: "md", md: "lg" }}>
       <TagLeftIcon color="currentColor" boxSize={6} as={getIcon(label)} />
       <TagLabel>{label}</TagLabel>
     </Tag>
   );
 };
 
-const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
+const Technologies: React.FC<TechnologiesProps> = ({
+  technologies,
+  size,
+  justify = "start",
+}) => {
   return (
-    <Wrap>
+    <Wrap justify={justify}>
       {technologies.map((tech, index) => (
         <WrapItem key={index}>
-          <Technology label={tech} />
+          <Technology label={tech} size={size} />
         </WrapItem>
       ))}
     </Wrap>

@@ -109,7 +109,8 @@ const timelineData: Timeline = [
     date: "2020",
     position: "Catched-up with latest techs",
     company: "wfh",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
     technologies: [
       { label: "Visual code", icon: SiVisualstudiocode },
       { label: "React", icon: SiReact },
@@ -127,7 +128,9 @@ const timelineData: Timeline = [
     date: "2018 to 2020",
     position: "Devops for retail websites",
     company: "HR Team, Lille, France",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
+
     technologies: [
       { label: "ES6", icon: SiJavascript },
       { label: "Confluence", icon: SiConfluence },
@@ -163,7 +166,8 @@ const timelineData: Timeline = [
     date: "2010 to 2018",
     position: "Developping and debugging of JS and native apps",
     company: "Gfi world, Lille, France",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
     technologies: [
       { label: "Jira", icon: SiJira },
       { label: "Java", icon: SiJava },
@@ -200,7 +204,9 @@ const timelineData: Timeline = [
     date: "2008 to 2009",
     position: "Developing management software for banks & insurances",
     company: "Nat System, Paris, France",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
+
     technologies: [
       { label: "NSDK", icon: SiHackthebox },
       { label: "NatStar", icon: SiHackthebox },
@@ -230,7 +236,8 @@ const timelineData: Timeline = [
     date: "2007",
     position: "Bachelor of Technology",
     company: "Université Paris Cité, Champs-sur-Marne, France",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
     technologies: [
       { label: "C++", icon: SiCplusplus },
       { label: "Java", icon: SiJava },
@@ -246,7 +253,8 @@ const timelineData: Timeline = [
     date: "before 2005",
     position: "Debut",
     company: "Amstrad CPC 6128+",
-    description: "...",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
     technologies: [{ label: "Basic" }],
   },
 ];

@@ -105,10 +105,7 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
         </Stack>
         {technologies && (
           <Box textAlign={{ base: "start", md: "end" }}>
-            <Technologies
-              {...technologiesStyle}
-              technologies={technologies.map((t) => t.label)}
-            />
+            <Technologies {...technologiesStyle} technologies={technologies} />
           </Box>
         )}
       </SimpleGrid>

@@ -1,12 +1,10 @@
 import {
   Heading,
   Stack,
-  StackProps,
   Tag,
   TagLabel,
   TagLeftIcon,
   TagProps,
-  TypographyProps,
   Wrap,
   WrapItem,
   WrapProps,

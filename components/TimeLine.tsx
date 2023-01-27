@@ -53,7 +53,7 @@ const TimeLineRow: React.FC<TimeLineRowProps> = ({ event, isEven }) => {
   const cardStyle: BoxProps = {
     maxWidth: "4xl",
     margin: "auto",
-    backgroundColor: "surface",
+    backgroundColor: event.isHighlight ? "highlight" : "surface",
     paddingX: { base: 3, sm: 6, md: 12 },
     paddingY: { base: 6, sm: 12 },
     position: "initial",

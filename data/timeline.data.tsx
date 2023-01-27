@@ -1,36 +1,5 @@
-import {
-  FaLightbulb,
-  FaLinkedin,
-  FaMugHot,
-  FaTags,
-  FaWalking,
-} from "react-icons/fa";
+import { FaLightbulb, FaLinkedin, FaMugHot, FaWalking } from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
-import {
-  SiAngular,
-  SiConfluence,
-  SiCplusplus,
-  SiCss3,
-  SiDotnet,
-  SiEslint,
-  SiGoogletagmanager,
-  SiHackthebox,
-  SiHtml5,
-  SiJava,
-  SiJavascript,
-  SiJira,
-  SiNpm,
-  SiNuxtdotjs,
-  SiPhp,
-  SiPostgresql,
-  SiPrettier,
-  SiReact,
-  SiSvelte,
-  SiTypescript,
-  SiVisualstudiocode,
-  SiVuedotjs,
-  SiVuetify,
-} from "react-icons/si";
 import { TbDeviceFloppy } from "react-icons/tb";
 import { Timeline } from "../models/TimelineData.model";
 
@@ -53,28 +22,26 @@ const timelineData: Timeline = [
     date: "Today",
     position: "Looking for opportunities",
     company: "Pole emploi",
-    technologies: [
-      { label: "React" },
-      { label: "Node" },
-      { label: "Typescript" },
-    ],
+    technologies: ["React", "Node", "Typescript"],
     description:
       "Direct-relation, part-time or full time. Industry : social, culture, education, environment, solidarity, open-source. Technical stack : React, Next.js, Node.js, TypeScript",
   },
   {
     logo: jobIcon,
+    isHighlight: true,
     color: extiaColors,
     date: "2020 to 2021",
     position: "Developing React & Vue websites",
     company: "Extia, Lille, France",
     description: "Learned TypeScript, Angular, Nuxt",
     technologies: [
-      { label: "Nuxt.js", icon: SiNuxtdotjs },
-      { label: "Vue.js", icon: SiVuedotjs },
-      { label: "React", icon: SiReact },
-      { label: "Vuetify", icon: SiVuetify },
-      { label: "Typescript", icon: SiTypescript },
-      { label: "Angular", icon: SiAngular },
+      "Nuxt.js",
+      "Vue.js",
+      "React",
+      "Vuetify",
+      "Typescript",
+      "Angular",
+      "Cypress",
     ],
     steps: [
       {
@@ -112,18 +79,19 @@ const timelineData: Timeline = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
     technologies: [
-      { label: "Visual code", icon: SiVisualstudiocode },
-      { label: "React", icon: SiReact },
-      { label: "Svelte", icon: SiSvelte },
-      { label: "Vue.js", icon: SiVuedotjs },
-      { label: "ES6", icon: SiJavascript },
-      { label: "NPM", icon: SiNpm },
-      { label: "Prettier", icon: SiPrettier },
-      { label: "ESLint", icon: SiEslint },
+      "Visual code",
+      "React",
+      "Svelte",
+      "Vue.js",
+      "ES6",
+      "NPM",
+      "Prettier",
+      "ESLint",
     ],
   },
   {
     logo: jobIcon,
+    isHighlight: true,
     color: hrTeamColors,
     date: "2018 to 2020",
     position: "Devops for retail websites",
@@ -132,13 +100,13 @@ const timelineData: Timeline = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
 
     technologies: [
-      { label: "ES6", icon: SiJavascript },
-      { label: "Confluence", icon: SiConfluence },
-      { label: ".net", icon: SiDotnet },
-      { label: "Jira", icon: SiJira },
-      { label: "Confluence", icon: SiConfluence },
-      { label: "GTM", icon: SiGoogletagmanager },
-      { label: "TagCommander", icon: FaTags },
+      "ES6",
+      "Confluence",
+      ".net",
+      "Jira",
+      "Confluence",
+      "GTM",
+      "TagCommander",
     ],
     steps: [
       {
@@ -148,7 +116,7 @@ const timelineData: Timeline = [
         position: "Technical project manager",
         company: "La Redoute",
         description: "",
-        technologies: [{ label: "PostgreSQL", icon: SiPostgresql }],
+        technologies: ["PostgreSQL"],
       },
       {
         logo: missionIcon,
@@ -163,17 +131,13 @@ const timelineData: Timeline = [
   {
     logo: jobIcon,
     color: gfiColors,
+    isHighlight: true,
     date: "2010 to 2018",
     position: "Developping and debugging of JS and native apps",
     company: "Gfi world, Lille, France",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
-    technologies: [
-      { label: "Jira", icon: SiJira },
-      { label: "Java", icon: SiJava },
-      { label: "JavaScript", icon: SiJavascript },
-      { label: "NSDK", icon: SiHackthebox },
-    ],
+    technologies: ["Jira", "Java", "JavaScript", "NSDK"],
     steps: [
       {
         logo: missionIcon,
@@ -182,11 +146,7 @@ const timelineData: Timeline = [
         position: "Technical support engineer",
         company: "Decathlon",
         description: "",
-        technologies: [
-          { label: "Jira", icon: SiJira },
-          { label: "Java", icon: SiJava },
-          { label: "JavaScript", icon: SiJavascript },
-        ],
+        technologies: ["Jira", "Java", "JavaScript"],
       },
       {
         logo: missionIcon,
@@ -207,10 +167,7 @@ const timelineData: Timeline = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
 
-    technologies: [
-      { label: "NSDK", icon: SiHackthebox },
-      { label: "NatStar", icon: SiHackthebox },
-    ],
+    technologies: ["NDSK", "NatStar"],
     steps: [
       {
         logo: missionIcon,
@@ -239,12 +196,13 @@ const timelineData: Timeline = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
     technologies: [
-      { label: "C++", icon: SiCplusplus },
-      { label: "Java", icon: SiJava },
-      { label: "JavaScript", icon: SiJavascript },
-      { label: "PHP", icon: SiPhp },
-      { label: "HTML", icon: SiHtml5 },
-      { label: "CSS", icon: SiCss3 },
+      "C++",
+      "Java",
+      "JavaScript",
+      "PHP",
+      "HTML",
+      "CSS",
+      "Visual Basic",
     ],
   },
   {
@@ -255,7 +213,7 @@ const timelineData: Timeline = [
     company: "Amstrad CPC 6128+",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
-    technologies: [{ label: "Basic" }],
+    technologies: ["Basic", "HTML", "CSS", "JavaScript"],
   },
 ];
 

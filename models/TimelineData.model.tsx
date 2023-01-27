@@ -12,7 +12,8 @@ export interface TimelineData {
   date: string;
   color: string;
   steps?: Timeline;
-  technologies?: Technology[];
+  technologies?: Technology["label"][];
+  isHighlight?: boolean;
 }
 
 export type Timeline = TimelineData[];

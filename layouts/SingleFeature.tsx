@@ -17,45 +17,31 @@ const SingleFeature: React.FC<Props> = ({
   description,
 }) => {
   return (
-    <Flex
-      w="full"
-      bg="#edf3f8"
-      _dark={{
-        bg: "#3e3e3e",
-      }}
-      p={50}
-      alignItems="center"
-      justifyContent="center"
-    >
+    <Flex w="full" alignItems="center" justifyContent="center">
       <Box
+        w="full"
         maxW="7xl"
         px={4}
         mx="auto"
-        textAlign={{
-          base: "left",
-          md: "center",
-        }}
-        bg="white"
-        _dark={{
-          bg: "gray.800",
-        }}
+        textAlign="center"
+        bg="surface"
         rounded="md"
         shadow="base"
       >
         <Box px={{ base: 0, lg: 4 }} py={20} borderWidth="1" color="primary">
-          <Box w={{ base: "full", lg: "60%" }} mx="auto">
+          <Box w={{ base: "full" }} mx="auto">
             <Text
               mb={2}
-              fontSize="5xl"
+              fontSize={{ base: "3xl", md: "5xl" }}
               fontWeight={{ base: "bold", lg: "extrabold" }}
               lineHeight="tight"
               display="flex"
-              flexDirection={{ base: "column", lg: "row" }}
+              flexDirection={{ base: "column" }}
               //   alignItems="baseline"
               justifyItems="start"
-              alignItems={{ base: "flex-start", md: "center" }}
+              alignItems="center"
             >
-              <Flex align="center">
+              <Flex as="span" align="center" gap={2}>
                 <Icon as={icon} alignSelf="center" />
                 {titleStart}
               </Flex>
@@ -80,7 +66,7 @@ const SingleFeature: React.FC<Props> = ({
             >
               {description}
             </chakra.p>
-            <Stack
+            {/* <Stack
               display={{ base: "block", lg: "flex" }}
               spacing={2}
               justifyContent="center"
@@ -134,7 +120,7 @@ const SingleFeature: React.FC<Props> = ({
               >
                 Contact Us
               </Link>
-            </Stack>
+            </Stack> */}
           </Box>
         </Box>
       </Box>

@@ -3,6 +3,7 @@ import { MdSettingsAccessibility } from "react-icons/md";
 import { SiJavascript, SiNpm, SiReact, SiTestinglibrary } from "react-icons/si";
 import Feature from "../components/Feature";
 import PageLayout from "../layouts/PageLayout";
+import SingleFeature from "../layouts/SingleFeature";
 
 export default function Home() {
   return (
@@ -14,40 +15,45 @@ export default function Home() {
           I have many years of experience in consulting in all areas of digital (dev, testing, design). 
           I love minimal but accessible design. I love nature, games (video, board) and music."
       >
-        <SimpleGrid columns={{ base: 1, lg: 2, xl: 3 }} gap={10}>
-          <Feature title="React.js" icon={SiReact}>
-            <Text>
-              Proficiency in React.js and its ecosystem, including popular
-              libraries such as Redux and React Router.
-            </Text>
-          </Feature>
+        <SimpleGrid columns={{ base: 1, lg: 2 }} gap={5}>
+          <SingleFeature
+            titleStart="React.js"
+            titleEnd="Confirmed"
+            icon={SiReact}
+            description="Proficiency in React.js and its ecosystem, including popular
+              libraries such as Redux and React Router."
+          ></SingleFeature>
 
-          <Feature title="JavaScript" icon={SiJavascript}>
-            <Text>
-              Strong understanding of JavaScript and web development concepts,
-              including HTML, CSS, and the DOM.
-            </Text>
-          </Feature>
+          <SingleFeature
+            titleStart="JavaScript"
+            titleEnd="Confirmed"
+            icon={SiJavascript}
+            description="Strong understanding of JavaScript and web development concepts,
+              including HTML, CSS, and the DOM."
+          ></SingleFeature>
 
-          <Feature title="Tools" icon={SiNpm}>
-            <Text>
-              Familiarity with modern front-end development tools, such as
-              webpack, Babel, and npm.
-            </Text>
-          </Feature>
+          <SingleFeature
+            titleStart="Dev tools"
+            titleEnd="Confirmed"
+            icon={SiNpm}
+            description="Familiarity with modern front-end development tools, such as
+              webpack, Babel, and npm."
+          ></SingleFeature>
 
-          <Feature title="Testing" icon={SiTestinglibrary}>
-            <Text>
-              Experience with unit testing and debugging React applications.
-            </Text>
-          </Feature>
+          <SingleFeature
+            titleStart="Testing"
+            titleEnd="Confirmed"
+            icon={SiTestinglibrary}
+            description="Experience with unit testing and debugging React applications."
+          ></SingleFeature>
 
-          <Feature title="Best practices" icon={MdSettingsAccessibility}>
-            <Text>
-              Understanding of best practices for performance optimization and
-              user experience in web applications.
-            </Text>
-          </Feature>
+          <SingleFeature
+            titleStart="Best practices"
+            titleEnd="Confirmed"
+            icon={MdSettingsAccessibility}
+            description="Understanding of best practices for performance optimization and
+              user experience in web applications."
+          ></SingleFeature>
         </SimpleGrid>
       </PageLayout>
     </>

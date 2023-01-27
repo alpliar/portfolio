@@ -1,14 +1,5 @@
-import {
-  Badge,
-  Flex,
-  Icon,
-  useColorModeValue,
-  VisuallyHidden,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Badge, useColorModeValue, Wrap, WrapItem } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
-import { FaLinkedin } from "react-icons/fa";
 import Link from "../components/Link";
 
 type HeaderLinkProps = {
@@ -26,7 +17,7 @@ const HeaderLink: React.FC<HeaderLinkProps> = ({ href, children }) => (
 
 const HeaderLinks = ({}) => {
   return (
-    <Wrap>
+    <Wrap justify={{ base: "center", md: "start" }}>
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/skills">Skills</HeaderLink>
       <HeaderLink href="/projects">Projects</HeaderLink>

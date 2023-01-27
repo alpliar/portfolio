@@ -5,14 +5,16 @@ type Props = { start?: ReactNode; end?: ReactNode };
 
 const Header: React.FC<Props> = ({ start, end }) => {
   const containerStyle: FlexProps = {
+    direction: { base: "column", lg: "row" },
     align: "center",
     gap: 5,
+    wrap: "wrap",
+    justify: "space-between",
   };
 
   return (
-    <Flex {...containerStyle} wrap="wrap">
+    <Flex {...containerStyle}>
       {start}
-      <Spacer />
       {end}
     </Flex>
   );

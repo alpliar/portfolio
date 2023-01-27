@@ -1,5 +1,4 @@
-import { Box, Flex, Icon, VisuallyHidden } from "@chakra-ui/react";
-import React from "react";
+import { Flex, Icon, VisuallyHidden } from "@chakra-ui/react";
 import { FaLinkedin } from "react-icons/fa";
 import HeaderLinks from "../layouts/HeaderLinks";
 import { ColorModeToggle } from "./ColorModeToggle";

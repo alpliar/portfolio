@@ -14,7 +14,7 @@ export default function Home() {
           I have many years of experience in consulting in all areas of digital (dev, testing, design). 
           I love minimal but accessible design. I love nature, games (video, board) and music."
       >
-        <SimpleGrid columns={{ base: 1, md: 3 }} gap={10}>
+        <SimpleGrid columns={{ base: 1, lg: 2, xl: 3 }} gap={10}>
           <Feature title="React.js" icon={SiReact}>
             <Text>
               Proficiency in React.js and its ecosystem, including popular

@@ -87,7 +87,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
           <Center>
             <Divider maxW={64} />
           </Center>
-          <Flex direction="column" align={{ base: "left", md: "center" }}>
+          <Flex direction="column" align="center">
             <Heading {...titleStyle}>{title}</Heading>
             <Text {...subtitleStyle}>{subtitle}</Text>
           </Flex>

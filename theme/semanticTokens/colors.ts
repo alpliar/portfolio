@@ -46,6 +46,10 @@ const colors = {
     _dark: "cyan.500",
     _light: "pink.500",
   },
+  discrete: {
+    _dark: "gray.400",
+    _light: "gray.500",
+  },
 };
 
 export default colors;

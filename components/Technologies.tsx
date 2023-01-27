@@ -1,10 +1,12 @@
 import {
   Heading,
   Stack,
+  StackProps,
   Tag,
   TagLabel,
   TagLeftIcon,
   TagProps,
+  TypographyProps,
   Wrap,
   WrapItem,
   WrapProps,
@@ -49,13 +51,6 @@ import {
   SiVuetify,
 } from "react-icons/si";
 import { Technology } from "../models/TimelineData.model";
-
-export interface TechnologiesProps {
-  technologies: Technology["label"][];
-  size?: TagProps["size"];
-  justify?: WrapProps["justify"];
-  textAlign?: WrapProps["textAlign"];
-}
 
 const getIcon = (label: string): IconType => {
   switch (label) {
@@ -163,14 +158,19 @@ const Technology: React.FC<TechnologyProps> = ({ label, size }) => {
   );
 };
 
+export interface TechnologiesProps {
+  technologies: Technology["label"][];
+  size?: TagProps["size"];
+  justify?: WrapProps["justify"];
+}
+
 const Technologies: React.FC<TechnologiesProps> = ({
   technologies,
   size = "md",
   justify = "start",
-  textAlign = "start",
 }) => {
   return (
-    <Stack textAlign={textAlign} justify={justify} w="full">
+    <Stack justify={justify} w="full">
       <Heading color="primary" fontSize="md" as="span">
         Technologies
       </Heading>

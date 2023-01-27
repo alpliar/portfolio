@@ -1,14 +1,15 @@
 import {
   Box,
+  Flex,
   Heading,
   HeadingProps,
   Icon,
   IconProps,
   SimpleGrid,
   SimpleGridProps,
+  Stack,
   Text,
   TextProps,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { TimelineData } from "../models/TimelineData.model";
@@ -23,141 +24,75 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
   const { position, company, date, color, logo, description, technologies } =
     event;
 
-  const mdDateHeight = 8;
-  const mdDateWidth = 28;
-  const lgDateHeight = 8;
-  const lgDateOffset = 48;
-
   const dateStyle: TextProps = {
     color: "primary",
-    display: {
-      md: "inline-block",
-    },
     fontFamily: "monospace",
-    fontSize: {
-      base: "sm",
-      md: "md",
-      lg: "xl",
-    },
+    fontSize: "md",
     fontWeight: "bold",
-    left: {
-      // md: "var(--chakra-sizes-32)",
-      md: "50%",
-      lg: isEven ? "-100%" : `100%`,
-      // md: isEven ? -mdDateOffset : undefined,
-    },
-    paddingX: {
-      md: 6,
-    },
-    // letterSpacing: 0,
-    lineHeight: {
-      lg: lgDateHeight,
-      md: mdDateHeight,
-    },
-    position: {
-      md: "absolute",
-    },
-    right: {
-      lg: !isEven ? -lgDateOffset : undefined,
-      // md: !isEven ? -mdDateOffset : undefined,
-    },
-    textAlign: {
-      // md: "center",
-      md: "left",
-      lg: isEven ? "end" : "start",
-    },
+    left: "50%",
+    paddingX: { md: 6 },
+    position: { md: "absolute" },
     textTransform: "lowercase",
-    top: {
-      md: -1,
-      lg: `calc(50% - var(--chakra-sizes-${mdDateHeight / 2}))`,
-    },
+    top: { base: -2, sm: -4 },
     transform: {
       md: "rotate(-5deg) translateY(calc(-1 * var(--chakra-sizes-6)))",
-      lg: "inherit",
     },
     transition: "all ease-in-out 0.2s",
-    width: {
-      md: "50%",
-      lg: "100%",
-    },
-    zIndex: {
-      md: 1,
-    },
+    width: { md: "50%" },
+    zIndex: 1,
   };
 
-  const iconSize: IconProps["boxSize"] =
-    useBreakpointValue({
-      base: 8,
-      sm: 8,
-      md: 12,
-      lg: 14,
-    }) || 8;
+  const iconSize = 12;
 
   const iconStyle: IconProps = {
-    borderColor: "primary",
-    // color,
+    position: { md: "absolute" },
+    borderColor: "pale",
+    bgColor: "surface",
+    color: "primary",
     borderRadius: "full",
     borderWidth: 2,
     boxSize: iconSize,
-    color: "primary",
-    display: {
-      base: "none",
-      sm: "inline-block",
-    },
     fontSize: "18px",
-    height: iconSize,
     padding: 1.5,
-    position: {
-      sm: "absolute",
-    },
-    top: {
-      sm: `calc(50% - var(--chakra-sizes-${iconSize / 2}))`,
-    },
+    left: "calc(50% - var(--chakra-sizes-5))",
+    top: `calc(50% - var(--chakra-sizes-${iconSize / 2}))`,
     transition: "all ease-in-out 0.2s",
-    width: iconSize,
     zIndex: 1,
   };
-  const iconResponsiveProps: IconProps = useBreakpointValue({
-    sm: {
-      left: 10,
-    },
-    md: {
-      left: "calc(50% - var(--chakra-sizes-5))",
-      top: 10,
-    },
-    lg: {
-      textAlign: isEven ? "start" : "end",
-      right: 16,
-      left: isEven ? 16 : undefined,
-    },
-  }) as IconProps;
 
   const positionStyle: HeadingProps = {
     color: "primary",
-    fontSize: {
-      base: "md",
-      sm: "xl",
-    },
-    maxWidth: { md: 64, lg: "inherit" },
+    fontSize: "xl",
+    maxWidth: "xs",
   };
 
   const contentStyle: SimpleGridProps = {
-    transform: { lg: `rotate(${isEven ? -1 : 1}deg)` },
-    alignItems: { md: "start", lg: "start" },
-    maxWidth: "container.sm",
+    maxWidth: { base: "xs", sm: "sm", md: "container.md" },
     margin: "auto",
-    columns: { base: 1, md: 2, lg: 1 },
-    gap: { base: 5, md: iconSize * 2, lg: 5 },
+    columns: { base: 1, md: 2 },
+    gap: { base: 3, md: iconSize * 2 },
+  };
+
+  const technologiesStyle = {
+    justify: { base: "start", md: "end" },
+    size: { base: "md", lg: "lg" },
   };
 
   return (
     <>
-      <Text {...dateStyle}>{date}</Text>
-      <Icon as={logo} {...iconStyle} {...iconResponsiveProps} />
       <SimpleGrid {...contentStyle}>
-        <Box>
-          <Heading {...positionStyle}>{position}</Heading>
-          <Text>{company}</Text>
+        <Stack gap={{ base: 8, md: 0 }}>
+          <Stack align="center">
+            <Text {...dateStyle}>{date}</Text>
+            <Icon as={logo} {...iconStyle} />
+          </Stack>
+          <Flex gap={2}>
+            <Box>
+              <Heading {...positionStyle}>{position}</Heading>
+              <Text>{company}</Text>
+            </Box>
+          </Flex>
+
           {description && (
             <Text
               marginTop={{ base: 3, md: 5 }}
@@ -167,14 +102,14 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
               {description}
             </Text>
           )}
-        </Box>
+        </Stack>
         {technologies && (
-          <Technologies
-            textAlign={{ base: "start", md: "end", lg: "start" }}
-            justify={{ base: "start", md: "end", lg: "start" }}
-            technologies={technologies.map((t) => t.label)}
-            size={{ base: "md", lg: "lg" }}
-          />
+          <Box textAlign={{ base: "start", md: "end" }}>
+            <Technologies
+              {...technologiesStyle}
+              technologies={technologies.map((t) => t.label)}
+            />
+          </Box>
         )}
       </SimpleGrid>
     </>

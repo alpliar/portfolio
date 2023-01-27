@@ -5,6 +5,7 @@ type Props = { start?: ReactNode; end?: ReactNode };
 
 const Header: React.FC<Props> = ({ start, end }) => {
   const containerStyle: FlexProps = {
+    width: "full",
     direction: { base: "column", lg: "row" },
     align: "center",
     gap: 5,

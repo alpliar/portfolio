@@ -40,6 +40,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
     w: "full",
     maxW: "7xl",
     margin: "auto",
+    align: "center",
     padding: {
       base: 3,
       sm: 6,
@@ -65,11 +66,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
     mt: 4,
     maxW: "2xl",
     fontSize: "xl",
-    // mx: { lg: 'auto'},
-    color: "gray.500",
-    _dark: {
-      color: "gray.400",
-    },
+    color: "discrete",
   };
 
   return (

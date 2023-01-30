@@ -34,7 +34,7 @@ export const skillsData: Skill[] = [
     title: "React",
     icon: SiReact,
     text: "Since 2020. Solid experience in conceiving reusable components, with high level of abstraction.",
-    highlights: ["Separation of concerns", "Hooks", "Redux", "i18n"],
+    highlights: ["Hooks", "Redux", "i18n"],
   },
   {
     title: "Next.JS",

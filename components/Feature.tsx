@@ -51,11 +51,11 @@ const Feature: React.FC<FeatureProps> = ({ children, icon, title }) => {
             <Icon as={icon} {...iconStyle} />
           </Flex>
         </Flex>
-        <Flex wrap="wrap" gap={4} w="full">
+        <Flex direction="column" wrap="wrap" gap={2} w="full">
           <Heading as="h2" {...titleStyle}>
             {title}
           </Heading>
-          <Flex wrap="wrap" gap={4} color="discrete">
+          <Flex direction="column" wrap="wrap" gap={4} color="discrete">
             {children}
           </Flex>
         </Flex>

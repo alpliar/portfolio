@@ -28,14 +28,16 @@ const SkillsPage: React.FC<Props> = ({}) => {
           const { title, icon, text, highlights } = skill;
           return (
             <Feature key={sIndex} title={title} icon={icon}>
-              <Text>{text}</Text>
-              <Flex wrap="wrap" gap={2}>
-                {highlights.map((highlight, hIndex) => (
-                  <Tag key={hIndex} colorScheme={colorScheme}>
-                    {highlight}
-                  </Tag>
-                ))}
-              </Flex>
+              {text && <Text>{text}</Text>}
+              {highlights && (
+                <Flex wrap="wrap" gap={2}>
+                  {highlights.map((highlight, hIndex) => (
+                    <Tag key={hIndex} colorScheme={colorScheme}>
+                      {highlight}
+                    </Tag>
+                  ))}
+                </Flex>
+              )}
             </Feature>
           );
         })}

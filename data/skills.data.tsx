@@ -1,4 +1,7 @@
 import {
+  SiCss3,
+  SiGimp,
+  SiHtml5,
   SiNextdotjs,
   SiNuxtdotjs,
   SiReact,
@@ -9,33 +12,50 @@ import { Skill } from "../models/skill.model";
 
 export const skillsData: Skill[] = [
   {
+    title: "HTML",
+    icon: SiHtml5,
+    text: "Since 2005. Solid experience with HTML conception",
+    highlights: ["Metadata", "Semantic", "Accessibility"],
+  },
+  {
+    title: "CSS",
+    icon: SiCss3,
+    text: "Since 2005. Strong experience with CSS stylesheets",
+    highlights: ["Mobile-first", "Universal design"],
+  },
+  {
     title: "Typescript",
     icon: SiTypescript,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque provident quae autem esse inventore assumenda ad maiores ipsum amet dicta? Architecto, facere veniam! Officia, veritatis nesciunt. Pariatur nostrum ad illo?",
-    highlights: [],
+    text: "Since 2021. Strong appetence for typed code.",
+    // highlights: [],
   },
   {
     title: "React",
     icon: SiReact,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum eos ullam ducimus culpa quas eum eius, consequatur asperiores voluptatem, labore et esse deleniti, hic sint facere. Laborum libero a nam!",
-    highlights: ["Mobile-first", "Hooks", "Redux"],
+    text: "Since 2020. Solid experience in conceiving reusable components, with high level of abstraction.",
+    highlights: ["Separation of concerns", "Hooks", "Redux", "i18n"],
   },
   {
     title: "Next.JS",
     icon: SiNextdotjs,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum eos ullam ducimus culpa quas eum eius, consequatur asperiores voluptatem, labore et esse deleniti, hic sint facere. Laborum libero a nam!",
-    highlights: ["SSR", "SSG"],
+    text: "Since 2020",
+    highlights: ["SSR", "SSG", "i18n"],
   },
   {
     title: "Nuxt.JS",
     icon: SiNuxtdotjs,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum eos ullam ducimus culpa quas eum eius, consequatur asperiores voluptatem, labore et esse deleniti, hic sint facere. Laborum libero a nam!",
-    highlights: ["SSR", "SSG", "SEO"],
+    text: "Since 2021. One year professional experience",
+    highlights: ["SSR", "SSG", "SEO", "i18n"],
   },
   {
     title: "Svelte",
     icon: SiSvelte,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum eos ullam ducimus culpa quas eum eius, consequatur asperiores voluptatem, labore et esse deleniti, hic sint facere. Laborum libero a nam!",
-    highlights: [],
+    text: "Since 2020",
+    highlights: ["SvelteKit"],
+  },
+  {
+    title: "Gimp",
+    icon: SiGimp,
+    text: "",
   },
 ];

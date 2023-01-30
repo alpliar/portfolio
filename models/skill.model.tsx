@@ -4,5 +4,5 @@ export interface Skill {
   title: string;
   icon: IconType;
   text: string;
-  highlights: string[];
+  highlights?: string[];
 }

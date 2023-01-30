@@ -11,7 +11,7 @@ const ProjectActions: React.FC<ProjectActionsProps> = ({ project }) => {
   const colorScheme = useColorModeValue("purple", "cyan");
   const { sourceUrl, url, icon } = project;
   return (
-    <ButtonGroup justifyContent="end">
+    <ButtonGroup>
       {sourceUrl && (
         <Button
           as="a"

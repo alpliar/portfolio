@@ -3,6 +3,7 @@ import {
   SiGimp,
   SiHtml5,
   SiNextdotjs,
+  SiNodedotjs,
   SiNuxtdotjs,
   SiReact,
   SiSvelte,
@@ -54,7 +55,12 @@ export const skillsData: Skill[] = [
     highlights: ["SvelteKit"],
   },
   {
-    title: "Gimp",
+    title: "Node.JS",
+    icon: SiNodedotjs,
+    text: "",
+  },
+  {
+    title: "The Gimp",
     icon: SiGimp,
     text: "",
   },

@@ -55,7 +55,13 @@ const Feature: React.FC<FeatureProps> = ({ children, icon, title }) => {
           <Heading as="h2" {...titleStyle}>
             {title}
           </Heading>
-          <Flex direction="column" wrap="wrap" gap={4} color="discrete">
+          <Flex
+            direction="column"
+            wrap="wrap"
+            gap={4}
+            color="discrete"
+            flexGrow={1}
+          >
             {children}
           </Flex>
         </Flex>

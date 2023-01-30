@@ -1,9 +1,6 @@
 import { IconType } from "react-icons";
+import { Technology } from "./technology.model";
 
-export interface Technology {
-  label: string;
-  icon?: IconType;
-}
 export interface TimelineData {
   logo: IconType;
   position: string;

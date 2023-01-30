@@ -48,7 +48,7 @@ import {
   SiVuedotjs,
   SiVuetify,
 } from "react-icons/si";
-import { Technology } from "../models/TimelineData.model";
+import { Technology } from "../models/technology.model";
 
 const getIcon = (label: string): IconType => {
   switch (label) {

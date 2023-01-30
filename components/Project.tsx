@@ -19,7 +19,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
   const { title, icon, description, technologies } = project;
   return (
     <Card bgColor="surface" overflow="hidden">
-      <CardBody>
+      <CardBody display="flex" flexDirection={"column"}>
         <Heading
           m={-5}
           p={5}
@@ -39,6 +39,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           mt={10}
           padding={{ md: 5 }}
           transition="all 0.2s"
+          flexGrow={1}
         >
           <Text color="discrete">{description}</Text>
           <Box maxW={"lg"}>
@@ -48,7 +49,9 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
               technologies={technologies}
             />
           </Box>
-          <ProjectActions project={project} />
+          <Flex flexGrow={1} justifyContent="flex-end" alignItems="flex-end">
+            <ProjectActions project={project} />
+          </Flex>
         </Flex>
       </CardBody>
     </Card>

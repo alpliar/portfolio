@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { Technology } from "./TimelineData.model";
+import { Technology } from "./technology.model";
 
 export interface Project {
   title: string;

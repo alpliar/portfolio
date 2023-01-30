@@ -1,5 +1,4 @@
 import {
-  Box,
   BoxProps,
   Card,
   CardBody,
@@ -9,7 +8,6 @@ import {
   HeadingProps,
   Icon,
   IconProps,
-  ResponsiveValue,
 } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import { IconType } from "react-icons";
@@ -21,25 +19,17 @@ interface FeatureProps {
 }
 
 const Feature: React.FC<FeatureProps> = ({ children, icon, title }) => {
-  const iconSize: ResponsiveValue<number> = { base: 8, md: 12 };
-  const textStyle: BoxProps = {
-    mt: 2,
-    color: "gray.500",
-    _dark: {
-      color: "gray.400",
-    },
-  };
   const titleStyle: HeadingProps = {
     color: "primary",
     fontSize: "lg",
     fontFamily: "monospace",
-    minHeight: iconSize,
+    minHeight: 10,
     verticalAlign: "center",
   };
 
   const iconStyle: IconProps = {
     color: "primary",
-    boxSize: iconSize,
+    boxSize: 8,
     stroke: "currentcolor",
     "aria-hidden": "true",
   };
@@ -47,26 +37,28 @@ const Feature: React.FC<FeatureProps> = ({ children, icon, title }) => {
   const iconContainerStyle: FlexProps = {
     alignItems: "center",
     justifyContent: "center",
-    height: iconSize,
-    width: iconSize,
+    width: 10,
+    height: 10,
     rounded: "md",
     backgroundColor: "alpha",
   };
 
   return (
     <Card bgColor="surface">
-      <Flex as={CardBody}>
-        <Flex shrink={0}>
+      <Flex gap={4} as={CardBody}>
+        <Flex>
           <Flex {...iconContainerStyle}>
             <Icon as={icon} {...iconStyle} />
           </Flex>
         </Flex>
-        <Box ml={4} w="full">
+        <Flex wrap="wrap" gap={4} w="full">
           <Heading as="h2" {...titleStyle}>
             {title}
           </Heading>
-          <Box {...textStyle}>{children}</Box>
-        </Box>
+          <Flex wrap="wrap" gap={4} color="discrete">
+            {children}
+          </Flex>
+        </Flex>
       </Flex>
     </Card>
   );

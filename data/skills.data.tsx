@@ -18,19 +18,19 @@ export const skillsData: Skill[] = [
     title: "React",
     icon: SiReact,
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum eos ullam ducimus culpa quas eum eius, consequatur asperiores voluptatem, labore et esse deleniti, hic sint facere. Laborum libero a nam!",
-    highlights: ["Hooks", "Redux"],
+    highlights: ["Mobile-first", "Hooks", "Redux"],
   },
   {
     title: "Next.JS",
     icon: SiNextdotjs,
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum eos ullam ducimus culpa quas eum eius, consequatur asperiores voluptatem, labore et esse deleniti, hic sint facere. Laborum libero a nam!",
-    highlights: [],
+    highlights: ["SSR", "SSG"],
   },
   {
     title: "Nuxt.JS",
     icon: SiNuxtdotjs,
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum eos ullam ducimus culpa quas eum eius, consequatur asperiores voluptatem, labore et esse deleniti, hic sint facere. Laborum libero a nam!",
-    highlights: [],
+    highlights: ["SSR", "SSG", "SEO"],
   },
   {
     title: "Svelte",

@@ -1,4 +1,6 @@
 import {
+  Box,
+  Flex,
   SimpleGrid,
   Tag,
   Text,
@@ -26,14 +28,14 @@ const SkillsPage: React.FC<Props> = ({}) => {
           const { title, icon, text, highlights } = skill;
           return (
             <Feature key={sIndex} title={title} icon={icon}>
-              <Wrap spacing={4}>
-                <Text>{text}</Text>
+              <Text>{text}</Text>
+              <Flex wrap="wrap" gap={2}>
                 {highlights.map((highlight, hIndex) => (
                   <Tag key={hIndex} colorScheme={colorScheme}>
                     {highlight}
                   </Tag>
                 ))}
-              </Wrap>
+              </Flex>
             </Feature>
           );
         })}

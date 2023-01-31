@@ -15,7 +15,7 @@ const PageHeaderLogo: React.FC<Props> = ({}) => {
         height={avatar.height / 4}
       />
       {/* <Avatar src={avatar.src} /> */}
-      <Heading as="p">Portfolio</Heading>
+      <Heading as="p">{`Alexandre's Portfolio`}</Heading>
     </HStack>
   );
 };

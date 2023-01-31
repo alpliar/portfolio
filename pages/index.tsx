@@ -14,7 +14,7 @@ export default function Home() {
           I have many years of experience in consulting in all areas of digital (dev, testing, design). 
           I love minimal but accessible design. I love nature, games (video, board) and music."
       >
-        <SimpleGrid columns={{ base: 1, lg: 2 }} gap={5}>
+        <SimpleGrid columns={{ base: 1, lg: 2 }} gap={5} w="full">
           <SingleFeature
             titleStart="React.js"
             titleEnd="Confirmed"

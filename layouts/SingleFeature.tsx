@@ -27,19 +27,20 @@ const SingleFeature: React.FC<Props> = ({
         bg="surface"
         rounded="md"
         shadow="base"
+        height="100%"
       >
         <Box px={{ base: 0, lg: 4 }} py={20} borderWidth="1" color="primary">
-          <Box w={{ base: "full" }} mx="auto">
+          <Box w="full" mx="auto">
             <Text
               mb={2}
-              fontSize={{ base: "3xl", md: "5xl" }}
-              fontWeight={{ base: "bold", lg: "extrabold" }}
+              fontSize={{ base: "3xl", lg: "4xl" }}
+              fontWeight="bold"
               lineHeight="tight"
               display="flex"
-              flexDirection={{ base: "column" }}
-              //   alignItems="baseline"
+              flexDirection="column"
               justifyItems="start"
               alignItems="center"
+              isTruncated
             >
               <Flex as="span" align="center" gap={2}>
                 <Icon as={icon} alignSelf="center" />
@@ -57,6 +58,8 @@ const SingleFeature: React.FC<Props> = ({
               </chakra.span>
             </Text>
             <chakra.p
+              maxW="sm"
+              margin="auto"
               mb={6}
               fontSize={{ base: "lg", lg: "xl" }}
               color="gray.600"

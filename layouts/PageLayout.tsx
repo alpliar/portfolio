@@ -41,11 +41,16 @@ const PageLayout: React.FC<PageLayoutProps> = ({
     maxW: "7xl",
     margin: "auto",
     align: "center",
-    padding: {
-      base: 3,
-      sm: 6,
-      md: 16,
-      xl: 24,
+    paddingY: {
+      base: 8,
+      md: 12,
+      xl: 16,
+    },
+    paddingX: {
+      base: 4,
+      sm: 8,
+      md: 12,
+      xl: 16,
     },
     marginY: 8,
     transition: "all ease-in-out 0.2s",
@@ -64,7 +69,8 @@ const PageLayout: React.FC<PageLayoutProps> = ({
 
   const subtitleStyle: TextProps = {
     mt: 4,
-    maxW: "2xl",
+    paddingX: 8,
+    maxW: "xl",
     fontSize: "xl",
     color: "discrete",
   };
@@ -72,7 +78,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   return (
     <>
       <Head>
-        <title>{`AP | ${tabName || title}`}</title>
+        <title>{`Alexandre's ${tabName || title.toLocaleLowerCase()}`}</title>
         <meta name="description" content="Alexandre's portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -82,9 +88,9 @@ const PageLayout: React.FC<PageLayoutProps> = ({
         <Stack {...paperStyle}>
           <Header start={<PageHeaderLogo />} end={<PageHeaderEnd />} />
           <Center>
-            <Divider maxW={64} />
+            <Divider w={64} borderWidth={1} borderColor="currentColor" />
           </Center>
-          <Flex direction="column" align="center">
+          <Flex direction="column" align="center" gap={4}>
             <Heading {...titleStyle}>{title}</Heading>
             <Text {...subtitleStyle}>{subtitle}</Text>
           </Flex>

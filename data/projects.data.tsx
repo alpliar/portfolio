@@ -1,13 +1,18 @@
 import { FaRobot } from "react-icons/fa";
-import {
-  GiCrown,
-  GiMicrophone,
-  GiOpenedFoodCan,
-  GiWatermelon,
-} from "react-icons/gi";
+import { GiOpenedFoodCan, GiWatermelon } from "react-icons/gi";
+import { SiSuperuser } from "react-icons/si";
 import { Project } from "../models/project.model";
 
 const projectsData: Project[] = [
+  {
+    title: "Portfolio",
+    // url: "https://alpliar.vercel.app/",
+    sourceUrl: "https://github.com/alpliar/portfolio",
+    description:
+      "Portfolio of some websites and web applications I have had the opportunity to work on.",
+    icon: SiSuperuser,
+    technologies: ["Next.js", "React", "Typescript", "Chakra UI", "SSG"],
+  },
   {
     title: "Cassegrain",
     url: "https://www.cassegrain.com",

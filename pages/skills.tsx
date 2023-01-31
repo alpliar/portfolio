@@ -18,11 +18,7 @@ const SkillsPage: React.FC<Props> = ({}) => {
   const colorScheme = useColorModeValue("purple", "cyan");
 
   return (
-    <PageLayout
-      title="Skills"
-      subtitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-        impedit perferendis suscipit"
-    >
+    <PageLayout title="Skills" subtitle="">
       <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} gap={8}>
         {skillsData.map((skill, sIndex) => {
           const { title, icon, text, highlights } = skill;

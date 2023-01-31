@@ -9,7 +9,10 @@ type HeaderLinkProps = {
 
 const HeaderLink: React.FC<HeaderLinkProps> = ({ href, children }) => (
   <WrapItem>
-    <Badge fontSize="md" colorScheme={useColorModeValue("purple", "cyan")}>
+    <Badge
+      fontSize={{ base: "xl", lg: "md" }}
+      colorScheme={useColorModeValue("purple", "cyan")}
+    >
       <Link href={href}>{children}</Link>
     </Badge>
   </WrapItem>

@@ -5,13 +5,19 @@ import {
   HeadingProps,
   Icon,
   IconProps,
+  UnorderedList,
+  ListItem,
   SimpleGrid,
   SimpleGridProps,
   Stack,
   Text,
   TextProps,
+  ListIcon,
+  List,
+  Highlight,
 } from "@chakra-ui/react";
 import React from "react";
+import { MdCheckCircle } from "react-icons/md";
 import { TimelineData } from "../models/TimelineData.model";
 import Technologies from "./Technologies";
 
@@ -70,7 +76,7 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
     maxWidth: { base: "xs", sm: "sm", md: "container.md" },
     margin: "auto",
     columns: { base: 1, md: 2 },
-    gap: { base: 3, md: iconSize * 2 },
+    gap: { base: 8, md: iconSize * 2 },
   };
 
   const technologiesStyle = {
@@ -86,21 +92,37 @@ const TimeLineEvent: React.FC<Props> = ({ event, isEven }) => {
             <Text {...dateStyle}>{date}</Text>
             <Icon as={logo} {...iconStyle} />
           </Stack>
-          <Flex gap={2}>
-            <Box>
-              <Heading {...positionStyle}>{position}</Heading>
-              <Text>{company}</Text>
-            </Box>
-          </Flex>
+
+          <Box>
+            <Heading {...positionStyle}>{position}</Heading>
+            <Text>{company}</Text>
+          </Box>
 
           {description && (
-            <Text
-              marginTop={{ base: 3, md: 5 }}
-              maxWidth={{ md: 96, lg: "inherit" }}
-              marginX="auto"
-            >
-              {description}
-            </Text>
+            <Text maxWidth={{ md: 96, lg: "inherit" }}>{description}</Text>
+          )}
+
+          {event.steps?.length && (
+            <List spacing={3}>
+              {event.steps.map((step, index) => (
+                <ListItem flexDirection="column" key={index}>
+                  <ListIcon as={step.logo} color="primary" />
+                  <Highlight
+                    query={step.company}
+                    styles={{
+                      color: "primary",
+                      fontWeight: "bold",
+                      fontStyle: "italic",
+                      // px: "1",
+                      // py: "1",
+                      // bg: "primary",
+                    }}
+                  >
+                    {step.description}
+                  </Highlight>
+                </ListItem>
+              ))}
+            </List>
           )}
         </Stack>
         {technologies && (

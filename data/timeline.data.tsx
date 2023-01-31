@@ -21,10 +21,10 @@ const timelineData: Timeline = [
     color: recentEventColor,
     date: "Today",
     position: "Looking for opportunities",
-    company: "Pole emploi",
+    company: "",
     technologies: ["React", "Node", "Typescript"],
     description:
-      "Direct-relation, part-time or full time. Industry : social, culture, education, environment, solidarity, open-source. Technical stack : React, Next.js, Node.js, TypeScript",
+      "Looking for a frontend of fullstack developer position in Lyon, France. I'm attached to following industries : social, culture, education, environment, solidarity, open-source.",
   },
   {
     logo: jobIcon,
@@ -33,15 +33,20 @@ const timelineData: Timeline = [
     date: "2020 to 2021",
     position: "Developing React & Vue websites",
     company: "Extia, Lille, France",
-    description: "Learned TypeScript, Angular, Nuxt",
+    description: "",
+    // description: `
+    // For Bonduelle Group, a French processed vegetables producer.
+    // Development from scratch of a B2C showcase website + maintenance of Angular websites`,
     technologies: [
+      "Typescript",
+      "React",
+      "Cypress",
+      "Node.js",
       "Nuxt.js",
       "Vue.js",
-      "React",
       "Vuetify",
-      "Typescript",
       "Angular",
-      "Cypress",
+      "Yup",
     ],
     steps: [
       {
@@ -50,15 +55,17 @@ const timelineData: Timeline = [
         date: "2021",
         position: "Nuxt/Vue developer",
         company: "Bonduelle",
-        description: "",
+        description:
+          "Wrote a showcase website for Bonduelle Group, a French processed vegetables producer. Also maintained Angular websites",
       },
       {
         logo: missionIcon,
         color: extiaColors,
         date: "2021",
         position: "React Developer",
-        company: "Extia",
-        description: "",
+        company: "Extia Fablab",
+        description:
+          "Wrote a management app using React, Node, MongoDB, ChakraUI, for Extia FabLab",
       },
       {
         logo: missionIcon,
@@ -66,7 +73,8 @@ const timelineData: Timeline = [
         date: "2020",
         position: "Frontend engineer",
         company: "Camaïeu",
-        description: "",
+        description:
+          "Did project management and continuous monitoring of website of French brand Camaïeu, specialised in ready-to-wear apparel.",
       },
     ],
   },
@@ -74,16 +82,22 @@ const timelineData: Timeline = [
     logo: FaLightbulb,
     color: hrTeamColors,
     date: "2020",
-    position: "Catched-up with latest techs",
-    company: "wfh",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
+    position: "Catched-up on modern JavaScript frameworks",
+    company: "",
+    description: "",
+    technologies: ["React", "Svelte", "Vue.js"],
+  },
+  {
+    logo: FaLightbulb,
+    color: extiaColors,
+    date: "2020",
+    position: "Catched-up on modern JavaScript environment",
+    company: "",
+    description: "",
     technologies: [
-      "Visual code",
-      "React",
-      "Svelte",
-      "Vue.js",
+      "JavaScript",
       "ES6",
+      "Visual code",
       "NPM",
       "Prettier",
       "ESLint",
@@ -96,17 +110,17 @@ const timelineData: Timeline = [
     date: "2018 to 2020",
     position: "Devops for retail websites",
     company: "HR Team, Lille, France",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
-
+    description: "",
     technologies: [
       "ES6",
-      "Confluence",
-      ".net",
-      "Jira",
-      "Confluence",
+      "C#",
+      "PostgreSQL",
+      "WebExtensions",
       "GTM",
       "TagCommander",
+      "A/B Tasty",
+      "Jira",
+      "Confluence",
     ],
     steps: [
       {
@@ -115,8 +129,8 @@ const timelineData: Timeline = [
         date: "2018 to 2020",
         position: "Technical project manager",
         company: "La Redoute",
-        description: "",
-        technologies: ["PostgreSQL"],
+        description:
+          "Wrote JavaScript code, assumed project management and continuous monitoring of 11 websites, for the French brand La Redoute, specialised in ready-to-wear apparel and stylish home décor.",
       },
       {
         logo: missionIcon,
@@ -124,7 +138,8 @@ const timelineData: Timeline = [
         date: "2020",
         position: "Software engineer",
         company: "Leroy Merlin",
-        description: "",
+        description:
+          "Project management and tier 3 support, for the leading doityourself company in Europe : Leroy Merlin",
       },
     ],
   },
@@ -135,8 +150,7 @@ const timelineData: Timeline = [
     date: "2010 to 2018",
     position: "Developping and debugging of JS and native apps",
     company: "Gfi world, Lille, France",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
+    description: "",
     technologies: ["Jira", "Java", "JavaScript", "NSDK"],
     steps: [
       {
@@ -145,7 +159,8 @@ const timelineData: Timeline = [
         date: "2014 to 2017",
         position: "Technical support engineer",
         company: "Decathlon",
-        description: "",
+        description:
+          "Continuous monitoring of 13 websites, for Decathlon, the world's largest sporting goods retailer.",
         technologies: ["Jira", "Java", "JavaScript"],
       },
       {
@@ -154,7 +169,8 @@ const timelineData: Timeline = [
         date: "2010 to 2014",
         position: "Software engineer",
         company: "BPCE Group",
-        description: "",
+        description:
+          "Set-up of an outsourced service center for BPCE group, in order to handle maintenance of banking softwares",
       },
     ],
   },
@@ -164,9 +180,7 @@ const timelineData: Timeline = [
     date: "2008 to 2009",
     position: "Developing management software for banks & insurances",
     company: "Nat System, Paris, France",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
-
+    description: "",
     technologies: ["NDSK", "NatStar"],
     steps: [
       {
@@ -175,15 +189,17 @@ const timelineData: Timeline = [
         date: "2009",
         position: "Software engineer",
         company: "MAAF Assurances",
-        description: "",
+        description:
+          "Wrote management softwares for MAAF Assurances insurance company",
       },
       {
         logo: missionIcon,
         color: natSysColors,
         date: "2008",
         position: "Software engineer",
-        company: "BPCE Group / Natixis Garanties",
-        description: "",
+        company: "Natixis Garanties",
+        description:
+          "Wrote management softwares for Natixis Garanties (BPCE Group)",
       },
     ],
   },
@@ -193,13 +209,13 @@ const timelineData: Timeline = [
     date: "2007",
     position: "Bachelor of Technology",
     company: "Université Paris Cité, Champs-sur-Marne, France",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
+    description: "",
     technologies: [
       "C++",
       "Java",
       "JavaScript",
       "PHP",
+      "MySQL",
       "HTML",
       "CSS",
       "Visual Basic",
@@ -210,10 +226,10 @@ const timelineData: Timeline = [
     color: studyColor,
     date: "before 2005",
     position: "Debut",
-    company: "Amstrad CPC 6128+",
+    company: "",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo et earum eligendi molestiae ratione saepe nesciunt, laboriosam illo maxime aperiam ea, dolorum repellendus animi, obcaecati hic? Odit, nostrum iste.",
-    technologies: ["Basic", "HTML", "CSS", "JavaScript"],
+      "Fun fact, my very first time with code was BASIC language on Amstrad CPC 6128+ (released in 1990) and Texas Instruments TI83+ calculator.",
+    technologies: ["Basic", "TI-Basic", "HTML", "CSS", "JavaScript"],
   },
 ];
 

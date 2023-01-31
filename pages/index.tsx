@@ -1,7 +1,6 @@
-import { SimpleGrid, Text } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import { MdSettingsAccessibility } from "react-icons/md";
 import { SiJavascript, SiNpm, SiReact, SiTestinglibrary } from "react-icons/si";
-import Feature from "../components/Feature";
 import PageLayout from "../layouts/PageLayout";
 import SingleFeature from "../layouts/SingleFeature";
 

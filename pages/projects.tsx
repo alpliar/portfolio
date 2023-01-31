@@ -16,8 +16,7 @@ const ProjectsPage: React.FC<Props> = ({}) => {
     <>
       <PageLayout
         title="Projects"
-        subtitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-        impedit perferendis suscipit"
+        subtitle="Some recent projects i wanted to share"
       >
         <SimpleGrid columns={{ base: 1, lg: 2 }} gap={8}>
           {projectsData.map((project, index) => (

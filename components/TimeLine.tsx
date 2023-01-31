@@ -55,7 +55,7 @@ const TimeLineRow: React.FC<TimeLineRowProps> = ({ event, isEven }) => {
     margin: "auto",
     backgroundColor: event.isHighlight ? "highlight" : "surface",
     paddingX: { base: 3, sm: 6, md: 12 },
-    paddingY: { base: 6, sm: 12 },
+    paddingY: { base: 6, sm: 12, lg: 24 },
     position: "initial",
     transition: "all ease-in-out 0.2s",
     width: "full",

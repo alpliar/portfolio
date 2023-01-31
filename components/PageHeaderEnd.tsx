@@ -12,7 +12,7 @@ const PageHeaderEnd = (props: Props) => {
       <HeaderLinks />
       <Flex align="center">
         <Flex as={Link} href="https://www.linkedin.com/in/alexandrepl/" gap={4}>
-          <Icon color="primary" boxSize={6} as={FaLinkedin} />
+          <Icon color="primary" boxSize={8} p={1} as={FaLinkedin} />
           <VisuallyHidden>LinkedIn</VisuallyHidden>
         </Flex>
         <ColorModeToggle />

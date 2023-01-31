@@ -48,7 +48,7 @@ const colors = {
   },
   discrete: {
     _dark: "gray.400",
-    _light: "gray.500",
+    _light: "gray.600",
   },
 };
 

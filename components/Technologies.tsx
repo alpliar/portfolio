@@ -17,6 +17,7 @@ import {
   SiChakraui,
   SiConfluence,
   SiCplusplus,
+  SiCsharp,
   SiCss3,
   SiCypress,
   SiDotnet,
@@ -31,6 +32,7 @@ import {
   SiJavascript,
   SiJira,
   SiLua,
+  SiMysql,
   SiNextdotjs,
   SiNodedotjs,
   SiNpm,
@@ -48,6 +50,7 @@ import {
   SiVuedotjs,
   SiVuetify,
 } from "react-icons/si";
+import { IoExtensionPuzzleSharp } from "react-icons/io5";
 import { Technology } from "../models/technology.model";
 
 const getIcon = (label: string): IconType => {
@@ -122,6 +125,12 @@ const getIcon = (label: string): IconType => {
       return SiGraphql;
     case "Lua":
       return SiLua;
+    case "C#":
+      return SiCsharp;
+    case "WebExtensions":
+      return IoExtensionPuzzleSharp;
+    case "MySQL":
+      return SiMysql;
     case "GTM":
     case "Google Tag Manager":
       return SiGoogletagmanager;

@@ -1,9 +1,17 @@
 import { FaRobot } from "react-icons/fa";
-import { GiOpenedFoodCan, GiWatermelon } from "react-icons/gi";
+import { GiModernCity, GiOpenedFoodCan, GiWatermelon } from "react-icons/gi";
 import { SiSuperuser } from "react-icons/si";
 import { Project } from "../models/project.model";
 
 const projectsData: Project[] = [
+  {
+    title: "3D City Builder",
+    sourceUrl: "https://github.com/alpliar/city-builder",
+    url: "https://city-builder-alpliar.vercel.app/",
+    icon: GiModernCity,
+    technologies: ["Svelte", "Three.js", "Typescript"],
+    description: "A 3D city builder running in browser",
+  },
   {
     title: "Portfolio",
     // url: "https://alpliar.vercel.app/",

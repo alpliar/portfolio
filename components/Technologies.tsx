@@ -45,6 +45,7 @@ import {
   SiRubyonrails,
   SiSuperuser,
   SiSvelte,
+  SiThreedotjs,
   SiTypescript,
   SiVisualstudiocode,
   SiVuedotjs,
@@ -71,6 +72,9 @@ const getIcon = (label: string): IconType => {
       return SiNpm;
     case "C++":
       return SiCplusplus;
+    case "Three":
+    case "Three.js":
+      return SiThreedotjs;
     case "Node.js":
     case "NodeJS":
     case "Node":

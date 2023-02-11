@@ -1,9 +1,22 @@
 import { FaRobot } from "react-icons/fa";
-import { GiModernCity, GiOpenedFoodCan, GiWatermelon } from "react-icons/gi";
+import {
+  GiModernCity,
+  GiOpenedFoodCan,
+  GiPlatform,
+  GiWatermelon,
+} from "react-icons/gi";
 import { SiSuperuser } from "react-icons/si";
 import { Project } from "../models/project.model";
 
 const projectsData: Project[] = [
+  {
+    title: "RPG experiment",
+    sourceUrl: "https://github.com/alpliar/rpg-experiment",
+    url: "https://rpg-experiment-alpliar.vercel.app/",
+    icon: GiPlatform,
+    technologies: ["TypeScript", "Canvas", "Pixel-art"],
+    description: "A role-playing-game running in browser",
+  },
   {
     title: "3D City Builder",
     sourceUrl: "https://github.com/alpliar/city-builder",

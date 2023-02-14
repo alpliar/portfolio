@@ -32,6 +32,7 @@ import {
   SiJavascript,
   SiJira,
   SiLua,
+  SiMongodb,
   SiMysql,
   SiNextdotjs,
   SiNodedotjs,
@@ -94,6 +95,8 @@ const getIcon = (label: string): IconType => {
     case "Next.js":
     case "NextJS":
       return SiNextdotjs;
+    case "MongoDB":
+      return SiMongodb;
     case "Chakra UI":
       return SiChakraui;
     case "React":

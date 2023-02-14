@@ -1,5 +1,6 @@
 import { FaRobot } from "react-icons/fa";
 import {
+  GiMechanicGarage,
   GiModernCity,
   GiOpenedFoodCan,
   GiPlatform,
@@ -108,5 +109,12 @@ const projectsData: Project[] = [
   //   sourceUrl: "https://github.com/alpliar/karafun-frontend-case-study",
   //   technologies: ["NextJS", "React", "Typescript", "Chakra UI", "i18next"],
   // },
+  {
+    title: "Garage API",
+    sourceUrl: "https://github.com/alpliar/garage-api",
+    icon: GiMechanicGarage,
+    technologies: ["JavaScript", "Node.js", "GraphQL", "MongoDB", "Faker"],
+    description: "A GraphQL garage management API",
+  },
 ];
 export default projectsData;

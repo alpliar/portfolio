@@ -1,4 +1,10 @@
-import { FaLightbulb, FaLinkedin, FaMugHot, FaWalking } from "react-icons/fa";
+import {
+  FaLaptopHouse,
+  FaLightbulb,
+  FaLinkedin,
+  FaMugHot,
+  FaWalking,
+} from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
 import { TbDeviceFloppy } from "react-icons/tb";
 import { Timeline } from "../models/TimelineData.model";
@@ -7,8 +13,10 @@ const jobIcon = FaWalking;
 const missionIcon = FaMugHot;
 const schoolIcon = MdSchool;
 const searchingIcon = FaLinkedin;
+const remoteIcon = FaLaptopHouse;
 
 const recentEventColor = "orange.800";
+const playinColors = "yelow.500";
 const extiaColors = "orange.700";
 const hrTeamColors = "orange.600";
 const gfiColors = "orange.500";
@@ -22,9 +30,20 @@ const timelineData: Timeline = [
     date: "Today",
     position: "Looking for opportunities",
     company: "",
-    technologies: ["React", "Node", "Typescript"],
+    technologies: ["Next.js", "React", "Typescript"],
     description:
-      "Looking for a frontend of fullstack developer position in Lyon, France. I'm attached to following industries : social, culture, education, environment, solidarity, open-source.",
+      "Looking for a full remote frontend or fullstack developer position, European Union. I'm attached to following industries : social, culture, education, environment, solidarity, open-source.",
+  },
+  {
+    logo: remoteIcon,
+    isHighlight: true,
+    color: playinColors,
+    date: "since 2023",
+    position: "Developing an online store with Next.js",
+    company: "Playin, Paris, France (full-remote)",
+    description:
+      "Development from scratch of an online store, specialized in board games and trading card games",
+    technologies: ["Typescript", "React", "Next.js", "GraphQL"],
   },
   {
     logo: jobIcon,
